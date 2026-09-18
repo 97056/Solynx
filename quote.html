@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Quote — Solynx Innovations</title>
+  <meta name="description" content="Request a project quote from Solynx Innovations. Tell us what you need, your budget, timeline, and contact details - we respond within one business day.">
+  <link rel="canonical" href="https://solynx.in/quote.html">
+  <meta property="og:title" content="Get a Quote — Solynx Innovations">
+  <meta property="og:description" content="Multi-step project quote wizard - scope your build with Solynx in minutes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://solynx.in/quote.html">
+  <meta name="theme-color" content="#05070d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <header id="site-header"></header>
+
+  <main class="page-content">
+    <section class="page-hero">
+      <div class="container-solynx">
+        <div class="split-section">
+          <div>
+            <p class="eyebrow" data-animate="fade-up">Quote</p>
+            <h1 data-animate="fade-up">START YOUR PROJECT.</h1>
+            <p class="lead" data-animate="fade-up">Answer a few focused questions. We will follow up with a tailored scope and timeline - not a one-size-fits-all estimate.</p>
+          </div>
+          <div class="quote-visual" data-animate="scale" aria-hidden="true">
+            <div class="visual-ring visual-ring--lg"></div>
+            <div class="visual-ring visual-ring--md"></div>
+            <div class="visual-orb"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container-solynx">
+        <div id="quote-wizard" class="quote-wizard" data-animate="fade-up">
+          <div class="quote-progress" aria-hidden="true">
+            <div class="quote-progress__step"></div>
+            <div class="quote-progress__step"></div>
+            <div class="quote-progress__step"></div>
+            <div class="quote-progress__step"></div>
+            <div class="quote-progress__step"></div>
+            <div class="quote-progress__step"></div>
+          </div>
+
+          <!-- Step 1: Need -->
+          <div class="quote-step">
+            <p class="eyebrow">Step 1 of 6</p>
+            <h2 class="h3 mb-2">What do you need?</h2>
+            <p class="text-muted small mb-4">Select the primary service for this engagement.</p>
+            <div class="quote-options" data-field="need">
+              <button type="button" class="quote-option" data-value="web">Web</button>
+              <button type="button" class="quote-option" data-value="mobile">Mobile</button>
+              <button type="button" class="quote-option" data-value="uiux">UI/UX</button>
+              <button type="button" class="quote-option" data-value="ecommerce">E-Commerce</button>
+              <button type="button" class="quote-option" data-value="software">Software</button>
+              <button type="button" class="quote-option" data-value="ai">AI</button>
+              <button type="button" class="quote-option" data-value="marketing">Marketing</button>
+              <button type="button" class="quote-option" data-value="other">Other</button>
+            </div>
+            <div class="quote-nav">
+              <span></span>
+              <button type="button" class="btn-solynx btn-solynx--primary" data-quote-next>Continue <span class="btn-arrow">→</span></button>
+            </div>
+          </div>
+
+          <!-- Step 2: Details -->
+          <div class="quote-step">
+            <p class="eyebrow">Step 2 of 6</p>
+            <h2 class="h3 mb-2">Project details</h2>
+            <p class="text-muted small mb-4">Describe what you are building and any constraints we should know.</p>
+            <div class="form-solynx">
+              <div class="form-group">
+                <label for="quote-title">Project title</label>
+                <input type="text" class="form-control" id="quote-title" name="title" required minlength="3" placeholder="e.g. Nova Commerce Platform">
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="form-group">
+                <label for="quote-details">Project description</label>
+                <textarea class="form-control" id="quote-details" name="details" required minlength="30" placeholder="Goals, users, features, integrations, and anything else that matters."></textarea>
+                <div class="invalid-feedback"></div>
+              </div>
+            </div>
+            <div class="quote-nav">
+              <button type="button" class="btn-solynx btn-solynx--ghost" data-quote-prev>Back</button>
+              <button type="button" class="btn-solynx btn-solynx--primary" data-quote-next>Continue <span class="btn-arrow">→</span></button>
+            </div>
+          </div>
+
+          <!-- Step 3: Budget -->
+          <div class="quote-step">
+            <p class="eyebrow">Step 3 of 6</p>
+            <h2 class="h3 mb-2">Budget range</h2>
+            <p class="text-muted small mb-4">Helps us recommend the right scope and team shape.</p>
+            <div class="quote-options" data-field="budget">
+              <button type="button" class="quote-option" data-value="under-10k">Under $10k</button>
+              <button type="button" class="quote-option" data-value="10k-25k">$10k - $25k</button>
+              <button type="button" class="quote-option" data-value="25k-50k">$25k - $50k</button>
+              <button type="button" class="quote-option" data-value="50k-100k">$50k - $100k</button>
+              <button type="button" class="quote-option" data-value="100k-plus">$100k+</button>
+              <button type="button" class="quote-option" data-value="undecided">Not sure</button>
+            </div>
+            <div class="quote-nav">
+              <button type="button" class="btn-solynx btn-solynx--ghost" data-quote-prev>Back</button>
+              <button type="button" class="btn-solynx btn-solynx--primary" data-quote-next>Continue <span class="btn-arrow">→</span></button>
+            </div>
+          </div>
+
+          <!-- Step 4: Timeline -->
+          <div class="quote-step">
+            <p class="eyebrow">Step 4 of 6</p>
+            <h2 class="h3 mb-2">Timeline</h2>
+            <p class="text-muted small mb-4">When do you need to launch or hit the next milestone?</p>
+            <div class="quote-options" data-field="timeline">
+              <button type="button" class="quote-option" data-value="asap">ASAP</button>
+              <button type="button" class="quote-option" data-value="1-3mo">1 - 3 months</button>
+              <button type="button" class="quote-option" data-value="3-6mo">3 - 6 months</button>
+              <button type="button" class="quote-option" data-value="6plus">6+ months</button>
+              <button type="button" class="quote-option" data-value="flexible">Flexible</button>
+            </div>
+            <div class="quote-nav">
+              <button type="button" class="btn-solynx btn-solynx--ghost" data-quote-prev>Back</button>
+              <button type="button" class="btn-solynx btn-solynx--primary" data-quote-next>Continue <span class="btn-arrow">→</span></button>
+            </div>
+          </div>
+
+          <!-- Step 5: Contact -->
+          <div class="quote-step">
+            <p class="eyebrow">Step 5 of 6</p>
+            <h2 class="h3 mb-2">Contact information</h2>
+            <p class="text-muted small mb-4">Where should we send your tailored quote?</p>
+            <div class="form-solynx">
+              <div class="form-group">
+                <label for="quote-name">Name</label>
+                <input type="text" class="form-control" id="quote-name" name="name" required minlength="2" autocomplete="name">
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="form-group">
+                <label for="quote-email">Email</label>
+                <input type="email" class="form-control" id="quote-email" name="email" required autocomplete="email">
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="form-group">
+                <label for="quote-phone">Phone</label>
+                <input type="tel" class="form-control" id="quote-phone" name="phone" autocomplete="tel">
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="form-group">
+                <label for="quote-company">Company</label>
+                <input type="text" class="form-control" id="quote-company" name="company" autocomplete="organization">
+                <div class="invalid-feedback"></div>
+              </div>
+            </div>
+            <div class="quote-nav">
+              <button type="button" class="btn-solynx btn-solynx--ghost" data-quote-prev>Back</button>
+              <button type="button" class="btn-solynx btn-solynx--primary" data-quote-next>Review <span class="btn-arrow">→</span></button>
+            </div>
+          </div>
+
+          <!-- Step 6: Confirmation -->
+          <div class="quote-step">
+            <div class="quote-confirm">
+              <div class="quote-confirm__icon" aria-hidden="true">✓</div>
+              <p class="eyebrow">Step 6 of 6</p>
+              <h2 class="h3 mb-3">Request received.</h2>
+              <p class="text-muted mb-4">Thank you for scoping your project with Solynx. Our team will review your brief and respond at <a href="mailto:support@solynx.in">support@solynx.in</a> within one business day.</p>
+              <div class="btn-group-solynx justify-content-center">
+                <a class="btn-solynx btn-solynx--primary" href="index.html">Back to Home</a>
+                <a class="btn-solynx btn-solynx--secondary" href="portfolio.html">View Our Work</a>
+              </div>
+            </div>
+            <div class="quote-nav">
+              <button type="button" class="btn-solynx btn-solynx--ghost" data-quote-prev>Back</button>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/3d-effects.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

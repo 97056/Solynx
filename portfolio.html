@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Solynx Innovations</title>
+  <meta name="description" content="Explore Solynx portfolio: web platforms, mobile apps, e-commerce, custom software, UI/UX, and AI projects built for ambitious brands.">
+  <link rel="canonical" href="https://solynx.in/portfolio.html">
+  <meta property="og:title" content="Portfolio — Solynx Innovations">
+  <meta property="og:description" content="Selected work across web, mobile, e-commerce, software, UI/UX, and AI - projects with presence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://solynx.in/portfolio.html">
+  <meta name="theme-color" content="#05070d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <header id="site-header"></header>
+
+  <main class="page-content">
+    <section class="page-hero">
+      <div class="container-solynx">
+        <p class="eyebrow" data-animate="fade-up">Portfolio</p>
+        <h1 data-animate="fade-up">PROJECTS WITH PRESENCE.</h1>
+        <p class="lead" data-animate="fade-up">Selected work across platforms and industries - engineered for performance, clarity, and measurable impact.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container-solynx">
+        <div class="filter-bar" data-animate="fade-up">
+          <button type="button" class="filter-chip is-active" data-filter="all">All</button>
+          <button type="button" class="filter-chip" data-filter="web">Web</button>
+          <button type="button" class="filter-chip" data-filter="mobile">Mobile</button>
+          <button type="button" class="filter-chip" data-filter="ecommerce">E-Commerce</button>
+          <button type="button" class="filter-chip" data-filter="software">Software</button>
+          <button type="button" class="filter-chip" data-filter="ui">UI/UX</button>
+          <button type="button" class="filter-chip" data-filter="ai">AI</button>
+        </div>
+
+        <div class="portfolio-masonry" data-stagger>
+          <a class="project-card project-card--tall" href="project-nova.html" data-category="ecommerce">
+            <div class="project-card__media"><div class="project-card__visual"></div></div>
+            <div class="project-card__body">
+              <div class="project-card__cat">Web Platform</div>
+              <h3 class="project-card__title">Nova Commerce OS</h3>
+              <div class="project-card__tech"><span>React</span><span>Node</span><span>AWS</span></div>
+              <span class="project-card__cta">View Project →</span>
+            </div>
+          </a>
+          <a class="project-card project-card--wide" href="project-pulse.html" data-category="mobile">
+            <div class="project-card__media"><div class="project-card__visual" style="background:linear-gradient(135deg,rgba(58,160,255,.12),rgba(0,229,192,.06))"></div></div>
+            <div class="project-card__body">
+              <div class="project-card__cat">Mobile</div>
+              <h3 class="project-card__title">Pulse Health</h3>
+              <div class="project-card__tech"><span>Flutter</span><span>Firebase</span></div>
+              <span class="project-card__cta">View Project →</span>
+            </div>
+          </a>
+          <a class="project-card" href="project-atlas.html" data-category="ai">
+            <div class="project-card__media"><div class="project-card__visual" style="background:linear-gradient(135deg,rgba(124,245,212,.1),rgba(58,160,255,.08))"></div></div>
+            <div class="project-card__body">
+              <div class="project-card__cat">AI</div>
+              <h3 class="project-card__title">Atlas Insight</h3>
+              <div class="project-card__tech"><span>Python</span><span>ML</span></div>
+              <span class="project-card__cta">View Project →</span>
+            </div>
+          </a>
+          <a class="project-card" href="project-lumen.html" data-category="ui">
+            <div class="project-card__media"><div class="project-card__visual"></div></div>
+            <div class="project-card__body">
+              <div class="project-card__cat">UI/UX</div>
+              <h3 class="project-card__title">Lumen Design System</h3>
+              <div class="project-card__tech"><span>Figma</span><span>Design Ops</span></div>
+              <span class="project-card__cta">View Project →</span>
+            </div>
+          </a>
+          <a class="project-card" href="project-orbit.html" data-category="software">
+            <div class="project-card__media"><div class="project-card__visual" style="background:linear-gradient(145deg,rgba(0,229,192,.06),rgba(10,32,48,.4))"></div></div>
+            <div class="project-card__body">
+              <div class="project-card__cat">Software</div>
+              <h3 class="project-card__title">Orbit Logistics</h3>
+              <div class="project-card__tech"><span>Node</span><span>PostgreSQL</span></div>
+              <span class="project-card__cta">View Project →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <canvas class="cta-band__canvas" id="cta-particles" aria-hidden="true"></canvas>
+      <div class="container-solynx cta-band__inner">
+        <p class="eyebrow" data-animate="fade-up" style="justify-content:center">Next step</p>
+        <h2 data-animate="fade-up">YOUR PROJECT COULD BE NEXT.</h2>
+        <p data-animate="fade-up">Let's engineer something worth showcasing.</p>
+        <div class="btn-group-solynx justify-content-center" data-animate="fade-up">
+          <a class="btn-solynx btn-solynx--primary btn-solynx--lg" href="quote.html" data-magnetic>Start a Project <span class="btn-arrow">→</span></a>
+          <a class="btn-solynx btn-solynx--secondary btn-solynx--lg" href="contact.html">Talk to Solynx</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/3d-effects.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

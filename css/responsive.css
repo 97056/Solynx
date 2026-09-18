@@ -1,0 +1,54 @@
+/* Responsive refinements */
+@media (max-width: 575.98px) {
+  .container-solynx,
+  .container-wide {
+    width: min(100% - 1.5rem, var(--container));
+  }
+
+  .btn-group-solynx {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-group-solynx .btn-solynx {
+    width: 100%;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--nav-height) + 2.5rem);
+  }
+
+  .process-track--horizontal {
+    grid-template-columns: 1fr !important;
+  }
+
+  .process-track--horizontal::before {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-3d__stage {
+    transform: none !important;
+  }
+}
+
+/* Prevent overflow */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+img {
+  height: auto;
+}
+
+/* Large screens */
+@media (min-width: 1600px) {
+  :root {
+    --container: 1320px;
+    --container-wide: 1520px;
+  }
+}
