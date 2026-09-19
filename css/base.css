@@ -264,15 +264,20 @@ p {
   border: 0;
 }
 
-/* Noise overlay */
+/* Noise overlay — lightweight CSS grain (SVG feTurbulence was janking scroll) */
 .noise-overlay {
   pointer-events: none;
   position: fixed;
   inset: 0;
   z-index: 50;
-  opacity: 0.035;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  mix-blend-mode: overlay;
+  opacity: 0.03;
+  background-image: repeating-radial-gradient(
+    circle at 20% 30%,
+    rgba(255, 255, 255, 0.04) 0 0.5px,
+    transparent 0.6px 3px
+  );
+  background-size: 120px 120px;
+  mix-blend-mode: soft-light;
 }
 
 /* Page shell */
@@ -311,7 +316,12 @@ body.is-loaded .page-content {
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 64px 64px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 20%, transparent 75%);
-  animation: gridDrift 40s linear infinite;
+}
+
+@media (min-width: 992px) and (prefers-reduced-motion: no-preference) {
+  .bg-grid {
+    animation: gridDrift 40s linear infinite;
+  }
 }
 
 .bg-glow {
@@ -319,22 +329,29 @@ body.is-loaded .page-content {
   width: 60vw;
   height: 60vw;
   border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.35;
+  opacity: 0.4;
+  will-change: auto;
 }
 
 .bg-glow--1 {
   top: -20%;
   left: -10%;
-  background: radial-gradient(circle, rgba(0, 229, 192, 0.25), transparent 70%);
-  animation: glowFloat 18s ease-in-out infinite;
+  background: radial-gradient(circle, rgba(0, 229, 192, 0.28), transparent 70%);
 }
 
 .bg-glow--2 {
   bottom: -15%;
   right: -10%;
-  background: radial-gradient(circle, rgba(58, 160, 255, 0.22), transparent 70%);
-  animation: glowFloat 22s ease-in-out infinite reverse;
+  background: radial-gradient(circle, rgba(58, 160, 255, 0.24), transparent 70%);
+}
+
+@media (min-width: 992px) and (prefers-reduced-motion: no-preference) {
+  .bg-glow--1 {
+    animation: glowFloat 18s ease-in-out infinite;
+  }
+  .bg-glow--2 {
+    animation: glowFloat 22s ease-in-out infinite reverse;
+  }
 }
 
 .bg-light-beam {

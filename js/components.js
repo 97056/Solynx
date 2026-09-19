@@ -276,10 +276,11 @@
   function buildHeroVisual(page) {
     const config = PAGE_VISUALS[page];
     if (!config) return null;
+    // No data-animate — hero visuals must paint immediately (mobile was stuck at opacity:0)
     return (
       '<div class="hx-visual hx-visual--' +
       config.key +
-      '" aria-hidden="true" data-animate="scale">' +
+      '" aria-hidden="true">' +
       config.html +
       '<span class="hx-visual__label">' +
       config.label +
@@ -508,9 +509,19 @@
     });
   }
 
+  // Skip re-inject when about already ships the Solynx core markup
+  function ensureHeroVisualsSafe() {
+    const existingAbout = document.querySelector(".page-hero .hx-visual--about");
+    if (existingAbout) {
+      existingAbout.classList.add("is-inview");
+      return;
+    }
+    ensureHeroVisuals();
+  }
+
   injectBrandHead();
   renderLoader();
   renderNavbar();
   renderFooter();
-  ensureHeroVisuals();
+  ensureHeroVisualsSafe();
 })();

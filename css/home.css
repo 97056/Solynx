@@ -375,7 +375,7 @@
   50% { transform: rotate(8deg) translateY(-10px); }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991.98px) {
   .hero-stage {
     max-width: 360px;
   }
@@ -383,6 +383,30 @@
   .hero-stage__frame--mobile,
   .hero-stage__code {
     display: none;
+  }
+  .hero-stage__glow {
+    filter: none;
+    animation: none;
+  }
+  .hero-stage__orbit {
+    animation: none;
+  }
+  .hero-stage__hud,
+  .hero-stage__frame {
+    animation: none;
+  }
+  .hero-stage__code-scroll pre {
+    animation: none;
+  }
+  .hero-stage__core-inner {
+    animation: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-stage {
+    max-width: 100%;
+    aspect-ratio: 1 / 0.95;
   }
 }
 

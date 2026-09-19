@@ -88,8 +88,16 @@
       window.SolynxAnimations.initCounters();
     }
     if (window.SolynxParticles) {
-      window.SolynxParticles.initParticles("particle-canvas", { count: 42 });
-      window.SolynxParticles.initParticles("cta-particles", { count: 36, color: "58, 160, 255" });
+      const narrow = window.innerWidth < 992;
+      window.SolynxParticles.initParticles("particle-canvas", {
+        count: narrow ? 0 : 24,
+        link: !narrow,
+      });
+      window.SolynxParticles.initParticles("cta-particles", {
+        count: narrow ? 12 : 20,
+        color: "58, 160, 255",
+        link: false,
+      });
     }
     if (window.Solynx3D) {
       window.Solynx3D.initTiltCards();

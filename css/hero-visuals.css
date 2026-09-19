@@ -755,7 +755,17 @@
 }
 
 @media (max-width: 991.98px) {
-  .hx-visual { min-height: 220px; max-width: 420px; margin-inline: auto; }
+  .hx-visual {
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    aspect-ratio: 1 / 0.92;
+    margin: 0.5rem 0 0;
+  }
+
+  .hx-visual--about .hx-core {
+    font-size: clamp(1.75rem, 10vw, 2.5rem);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
