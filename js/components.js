@@ -53,7 +53,17 @@
   const ARROW =
     '<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span>';
 
-  // Use .html links so local file:// preview works; live site still has clean SEO URLs via redirects + canonical.
+  // Hide Careers in nav/footer until this date (ISO). Set to past date to show again.
+  const CAREERS_VISIBLE_AFTER = "2026-10-03";
+
+  function isCareersVisible() {
+    try {
+      return Date.now() >= new Date(CAREERS_VISIBLE_AFTER + "T00:00:00").getTime();
+    } catch (e) {
+      return false;
+    }
+  }
+
   const navLinks = [
     { href: "index.html", label: "Home" },
     { href: "services.html", label: "Services" },
@@ -61,9 +71,11 @@
     { href: "portfolio.html", label: "Portfolio" },
     { href: "technologies.html", label: "Technologies" },
     { href: "about.html", label: "About" },
-    { href: "careers.html", label: "Careers" },
+    { href: "careers.html", label: "Careers", hiddenUntil: CAREERS_VISIBLE_AFTER },
     { href: "contact.html", label: "Contact" },
-  ];
+  ].filter(function (l) {
+    return l.label !== "Careers" || isCareersVisible();
+  });
 
   const PAGE_VISUALS = {
     "solutions.html": {
@@ -331,7 +343,9 @@
       "<p>Engineering intelligent digital products, immersive experiences, and scalable technology for ambitious businesses.</p>" +
       socialLinksHtml() +
       "</div>" +
-      '<div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="careers.html">Careers</a></li></ul></div>' +
+      '<div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li>' +
+      (isCareersVisible() ? '<li><a href="careers.html">Careers</a></li>' : "") +
+      "</ul></div>" +
       '<div class="footer-col"><h4>Services</h4><ul><li><a href="web-development.html">Web Development</a></li><li><a href="mobile-development.html">Mobile Apps</a></li><li><a href="ui-ux.html">UI/UX Design</a></li><li><a href="ai-solutions.html">AI Solutions</a></li><li><a href="ecommerce.html">E-Commerce</a></li></ul></div>' +
       '<div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:support@solynx.in">support@solynx.in</a></li><li><a href="contact.html">Contact form</a></li><li><a href="quote.html">Get a quote</a></li><li><a href="solutions.html">Industries</a></li><li><a href="technologies.html">Technologies</a></li></ul></div>' +
       '</div><div class="footer-bottom"><p>&copy; ' +
