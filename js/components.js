@@ -64,18 +64,43 @@
     }
   }
 
+  const NAV_ICONS = {
+    home: "M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5z",
+    services: "M4 7h16M4 12h16M4 17h10",
+    solutions: "M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3zm0 6v6m-3-3h6",
+    portfolio: "M4 7h16v12H4zM8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2",
+    technologies: "M9 3h6v4H9zM5 9h14v4H5zM8 15h8v6H8zM12 7v2M12 13v2",
+    about: "M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-4 0-7 2-7 4.5V20h14v-1.5C19 16 16 14 12 14z",
+    careers: "M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M4 10h16v10H4z",
+    contact: "M4 6h16v12H4zM4 7l8 6 8-6",
+  };
+
   const navLinks = [
-    { href: "index.html", label: "Home" },
-    { href: "services.html", label: "Services" },
-    { href: "solutions.html", label: "Solutions" },
-    { href: "portfolio.html", label: "Portfolio" },
-    { href: "technologies.html", label: "Technologies" },
-    { href: "about.html", label: "About" },
-    { href: "careers.html", label: "Careers", hiddenUntil: CAREERS_VISIBLE_AFTER },
-    { href: "contact.html", label: "Contact" },
+    { href: "index.html", label: "Home", icon: NAV_ICONS.home },
+    { href: "services.html", label: "Services", icon: NAV_ICONS.services },
+    { href: "solutions.html", label: "Solutions", icon: NAV_ICONS.solutions },
+    { href: "portfolio.html", label: "Portfolio", icon: NAV_ICONS.portfolio },
+    { href: "technologies.html", label: "Technologies", icon: NAV_ICONS.technologies },
+    { href: "about.html", label: "About", icon: NAV_ICONS.about },
+    { href: "careers.html", label: "Careers", icon: NAV_ICONS.careers, hiddenUntil: CAREERS_VISIBLE_AFTER },
+    { href: "contact.html", label: "Contact", icon: NAV_ICONS.contact },
   ].filter(function (l) {
     return l.label !== "Careers" || isCareersVisible();
   });
+
+  function navLinkHtml(l, className) {
+    return (
+      '<a class="' +
+      className +
+      '" href="' +
+      l.href +
+      '"><span class="nav-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="' +
+      l.icon +
+      '" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="nav-link__text">' +
+      l.label +
+      "</span></a>"
+    );
+  }
 
   const PAGE_VISUALS = {
     "solutions.html": {
@@ -296,12 +321,12 @@
 
     const desktop = navLinks
       .map(function (l) {
-        return '<a class="nav-link-solynx" href="' + l.href + '">' + l.label + "</a>";
+        return navLinkHtml(l, "nav-link-solynx");
       })
       .join("");
     const mobile = navLinks
       .map(function (l) {
-        return '<a href="' + l.href + '">' + l.label + "</a>";
+        return navLinkHtml(l, "nav-overlay__link");
       })
       .join("");
 
