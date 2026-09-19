@@ -329,9 +329,66 @@
     mount.classList.add("site-header");
   }
 
+  function footerLink(href, label, iconPath) {
+    return (
+      '<li><a class="footer-link" href="' +
+      href +
+      '"><span class="footer-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="' +
+      iconPath +
+      '" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>' +
+      label +
+      "</span></a></li>"
+    );
+  }
+
   function renderFooter() {
     const mount = document.getElementById("site-footer");
     if (!mount) return;
+
+    const I = {
+      home: "M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5z",
+      about: "M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-4 0-7 2-7 4.5V20h14v-1.5C19 16 16 14 12 14z",
+      services: "M4 7h16M4 12h16M4 17h10",
+      portfolio: "M4 7h16v12H4zM8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2",
+      careers: "M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M4 10h16v10H4z",
+      web: "M12 3a9 9 0 1 0 9 9M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18",
+      mobile: "M8 3h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm4 15h.01",
+      uiux: "M4 5h7v7H4zM13 5h7v4h-7zM13 11h7v8h-7zM4 14h7v5H4z",
+      ai: "M12 3v3M12 18v3M3 12h3M18 12h3M6.5 6.5l2 2M15.5 15.5l2 2M17.5 6.5l-2 2M8.5 15.5l-2 2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0z",
+      shop: "M4 7h16l-1.5 11H5.5L4 7zm4 0V5a4 4 0 0 1 8 0v2",
+      mail: "M4 6h16v12H4zM4 7l8 6 8-6",
+      form: "M7 4h10a1 1 0 0 1 1 1v14l-3-2-3 2-3-2-3 2V5a1 1 0 0 1 1-1zm3 5h4M8 12h8M8 15h5",
+      quote: "M8 8h3v5H8zm5 0h3v5h-3zM7 18l2.5-3h5L17 18",
+      industries: "M4 20V10l4-3 4 3 4-3 4 3v10M4 20h16M8 20v-4h3v4",
+      tech: "M9 3h6v4H9zM5 9h14v4H5zM8 15h8v6H8zM12 7v2M12 13v2",
+    };
+
+    const navigate =
+      "<ul>" +
+      footerLink("index.html", "Home", I.home) +
+      footerLink("about.html", "About", I.about) +
+      footerLink("services.html", "Services", I.services) +
+      footerLink("portfolio.html", "Portfolio", I.portfolio) +
+      (isCareersVisible() ? footerLink("careers.html", "Careers", I.careers) : "") +
+      "</ul>";
+
+    const services =
+      "<ul>" +
+      footerLink("web-development.html", "Web Development", I.web) +
+      footerLink("mobile-development.html", "Mobile Apps", I.mobile) +
+      footerLink("ui-ux.html", "UI/UX Design", I.uiux) +
+      footerLink("ai-solutions.html", "AI Solutions", I.ai) +
+      footerLink("ecommerce.html", "E-Commerce", I.shop) +
+      "</ul>";
+
+    const contact =
+      "<ul>" +
+      footerLink("mailto:support@solynx.in", "support@solynx.in", I.mail) +
+      footerLink("contact.html", "Contact form", I.form) +
+      footerLink("quote.html", "Get a quote", I.quote) +
+      footerLink("solutions.html", "Industries", I.industries) +
+      footerLink("technologies.html", "Technologies", I.tech) +
+      "</ul>";
 
     mount.innerHTML =
       '<div class="footer-marquee" aria-hidden="true"><span>SOLYNX INNOVATIONS — BUILD WHAT\'S NEXT — SOLYNX INNOVATIONS — BUILD WHAT\'S NEXT — </span><span>SOLYNX INNOVATIONS — BUILD WHAT\'S NEXT — SOLYNX INNOVATIONS — BUILD WHAT\'S NEXT — </span></div>' +
@@ -343,11 +400,15 @@
       "<p>Engineering intelligent digital products, immersive experiences, and scalable technology for ambitious businesses.</p>" +
       socialLinksHtml() +
       "</div>" +
-      '<div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li>' +
-      (isCareersVisible() ? '<li><a href="careers.html">Careers</a></li>' : "") +
-      "</ul></div>" +
-      '<div class="footer-col"><h4>Services</h4><ul><li><a href="web-development.html">Web Development</a></li><li><a href="mobile-development.html">Mobile Apps</a></li><li><a href="ui-ux.html">UI/UX Design</a></li><li><a href="ai-solutions.html">AI Solutions</a></li><li><a href="ecommerce.html">E-Commerce</a></li></ul></div>' +
-      '<div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:support@solynx.in">support@solynx.in</a></li><li><a href="contact.html">Contact form</a></li><li><a href="quote.html">Get a quote</a></li><li><a href="solutions.html">Industries</a></li><li><a href="technologies.html">Technologies</a></li></ul></div>' +
+      '<div class="footer-col"><h4>Navigate</h4>' +
+      navigate +
+      "</div>" +
+      '<div class="footer-col"><h4>Services</h4>' +
+      services +
+      "</div>" +
+      '<div class="footer-col"><h4>Contact</h4>' +
+      contact +
+      "</div>" +
       '</div><div class="footer-bottom"><p>&copy; ' +
       new Date().getFullYear() +
       ' Solynx Innovations. All rights reserved.</p><p><a href="mailto:support@solynx.in">support@solynx.in</a></p></div></div>';

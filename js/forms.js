@@ -29,12 +29,24 @@
     return valid;
   }
 
+  function selectedLabel(select) {
+    if (!select || !select.options || select.selectedIndex < 0) return "";
+    return (select.options[select.selectedIndex].textContent || "").trim();
+  }
+
+  function buildWhatsAppUrl(phone, text) {
+    const digits = String(phone).replace(/\D/g, "");
+    return "https://wa.me/" + digits + "?text=" + encodeURIComponent(text);
+  }
+
   function initContactForm() {
     const form = document.getElementById("contact-form");
     if (!form) return;
 
+    const WHATSAPP_NUMBER = "919705699481"; // +91 97056 99481
     const status = form.querySelector(".form-status");
     const fields = form.querySelectorAll("input, select, textarea");
+    const submitBtn = form.querySelector('[type="submit"]');
 
     fields.forEach((field) => {
       field.addEventListener("blur", () => validateField(field));
@@ -50,23 +62,59 @@
         if (!validateField(f)) ok = false;
       });
 
-      if (!status) return;
-
       if (!ok) {
-        status.className = "form-status is-error";
-        status.textContent = "Please fix the highlighted fields and try again.";
+        if (status) {
+          status.className = "form-status is-error";
+          status.textContent = "Please fix the highlighted fields and try again.";
+        }
         return;
       }
 
-      status.className = "form-status is-loading";
-      status.textContent = "Sending your message…";
+      const name = (form.name.value || "").trim();
+      const email = (form.email.value || "").trim();
+      const phone = (form.phone.value || "").trim();
+      const company = (form.company.value || "").trim();
+      const service = selectedLabel(form.service);
+      const budget = selectedLabel(form.budget);
+      const message = (form.message.value || "").trim();
 
-      setTimeout(() => {
+      const lines = [
+        "Hello Solynx Innovations,",
+        "",
+        "I submitted a project inquiry from the website:",
+        "",
+        "Name: " + name,
+        "Email: " + email,
+        phone ? "Phone: " + phone : null,
+        company ? "Company: " + company : null,
+        "Service: " + service,
+        "Budget: " + budget,
+        "",
+        "Message:",
+        message,
+      ].filter(function (line) {
+        return line !== null;
+      });
+
+      const url = buildWhatsAppUrl(WHATSAPP_NUMBER, lines.join("\n"));
+
+      if (status) {
         status.className = "form-status is-success";
-        status.textContent = "Thank you. Your message has been received. We'll respond within one business day.";
+        status.textContent = "Opening WhatsApp with your message…";
+      }
+      if (submitBtn) submitBtn.disabled = true;
+
+      window.open(url, "_blank", "noopener,noreferrer");
+
+      setTimeout(function () {
         form.reset();
         fields.forEach((f) => f.classList.remove("is-valid", "is-invalid"));
-      }, 1100);
+        if (submitBtn) submitBtn.disabled = false;
+        if (status) {
+          status.className = "form-status is-success";
+          status.textContent = "WhatsApp opened. Send the pre-filled message to reach Solynx.";
+        }
+      }, 400);
     });
   }
 
