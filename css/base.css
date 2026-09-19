@@ -85,6 +85,26 @@ textarea {
   outline: none;
 }
 
+/* Bootstrap form fields on dark UI — force visible typed text + placeholders */
+.form-control,
+.form-select,
+textarea.form-control {
+  color: var(--text-primary) !important;
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-color: var(--border) !important;
+}
+
+.form-control::placeholder,
+textarea.form-control::placeholder {
+  color: var(--text-secondary) !important;
+  opacity: 1 !important;
+}
+
+.form-select option {
+  background-color: #ffffff;
+  color: #121826;
+}
+
 button {
   cursor: pointer;
 }

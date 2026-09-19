@@ -547,11 +547,35 @@
 .form-solynx textarea {
   width: 100%;
   padding: 0.95rem 1.1rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   color: var(--text-primary);
   transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.form-solynx .form-control::placeholder,
+.form-solynx textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 1;
+}
+
+.form-solynx .form-control::-webkit-input-placeholder,
+.form-solynx textarea::-webkit-input-placeholder {
+  color: var(--text-secondary);
+  opacity: 1;
+}
+
+.form-solynx .form-control::-moz-placeholder,
+.form-solynx textarea::-moz-placeholder {
+  color: var(--text-secondary);
+  opacity: 1;
+}
+
+.form-solynx .form-control:-ms-input-placeholder,
+.form-solynx textarea:-ms-input-placeholder {
+  color: var(--text-secondary);
+  opacity: 1;
 }
 
 .form-solynx .form-control:focus,
@@ -559,7 +583,8 @@
 .form-solynx textarea:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(0, 229, 192, 0.12);
-  background: rgba(0, 229, 192, 0.03);
+  background: rgba(0, 229, 192, 0.05);
+  color: var(--text-primary);
 }
 
 .form-solynx .form-control.is-invalid,
@@ -588,10 +613,35 @@
 
 .form-solynx .form-select {
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.06);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a8b0c4' stroke-width='1.5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
+  background-size: 12px 8px;
   padding-right: 2.5rem;
+}
+
+/* Empty / placeholder option state */
+.form-solynx .form-select:required:invalid {
+  color: var(--text-secondary);
+}
+
+.form-solynx .form-select option {
+  /* Native OS menus (esp. Windows) often force a light popup — keep text dark so options stay readable */
+  background-color: #ffffff;
+  color: #121826;
+}
+
+.form-solynx .form-select option:disabled {
+  color: #6b7389;
+}
+
+.form-solynx .form-select option:checked {
+  background-color: #e8eef8;
+  color: #05070d;
 }
 
 .form-solynx textarea {
