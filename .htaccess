@@ -1,0 +1,35 @@
+RewriteEngine On
+RewriteBase /
+
+# Force HTTPS if available on host
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect .html to clean URLs
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1? [R=301,L]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Serve clean URLs from .html files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# Nested clean paths
+RewriteRule ^services/web\-development/?$ web-development.html [L]
+RewriteRule ^services/mobile\-app\-development/?$ mobile-development.html [L]
+RewriteRule ^services/ui\-ux\-design/?$ ui-ux.html [L]
+RewriteRule ^services/ecommerce\-development/?$ ecommerce.html [L]
+RewriteRule ^services/custom\-software\-development/?$ software-development.html [L]
+RewriteRule ^services/ai\-solutions/?$ ai-solutions.html [L]
+RewriteRule ^services/digital\-marketing/?$ digital-marketing.html [L]
+RewriteRule ^services/seo/?$ seo.html [L]
+RewriteRule ^services/software\-testing/?$ testing.html [L]
+RewriteRule ^services/data\-analytics/?$ data-analytics.html [L]
+RewriteRule ^portfolio/nova\-commerce\-os/?$ project-nova.html [L]
+RewriteRule ^portfolio/pulse\-health/?$ project-pulse.html [L]
+RewriteRule ^portfolio/atlas\-insight/?$ project-atlas.html [L]
+RewriteRule ^portfolio/lumen\-design\-system/?$ project-lumen.html [L]
+RewriteRule ^portfolio/orbit\-logistics/?$ project-orbit.html [L]

@@ -1,0 +1,62 @@
+name: Daily SEO Refresh
+
+on:
+  schedule:
+    # Every day at 03:30 UTC (09:00 IST)
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  seo-refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Apply SEO (titles, keywords, sitemap, lastmod)
+        run: python scripts/apply_seo.py
+
+      - name: Commit SEO refresh
+        id: commit
+        run: |
+          git config user.name "solynx-seo-bot"
+          git config user.email "support@solynx.in"
+          git add \
+            "*.html" \
+            sitemap.xml \
+            robots.txt \
+            .htaccess \
+            _redirects \
+            vercel.json \
+            seo/daily.json \
+            seo/config.json || true
+          if git diff --staged --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No SEO changes to commit."
+          else
+            git commit -m "chore(seo): daily keyword rotation and sitemap lastmod $(date -u +%Y-%m-%d)"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Push
+        if: steps.commit.outputs.changed == 'true'
+        run: git push
+
+      - name: Ping search engines (sitemap)
+        run: |
+          SITE="https://solynx.in/sitemap.xml"
+          curl -fsS -A "SolynxSEOBot/1.0" \
+            "https://www.google.com/ping?sitemap=${SITE}" || true
+          curl -fsS -A "SolynxSEOBot/1.0" \
+            "https://www.bing.com/ping?sitemap=${SITE}" || true
+          echo "Sitemap ping attempted for ${SITE}"

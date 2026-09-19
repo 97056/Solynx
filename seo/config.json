@@ -1,0 +1,240 @@
+{
+  "site": {
+    "name": "Solynx Innovations",
+    "url": "https://solynx.in",
+    "email": "support@solynx.in",
+    "locale": "en_IN",
+    "ogImage": "https://solynx.in/assets/brand/logo-dark.png",
+    "twitter": "@solynx"
+  },
+  "globalKeywords": [
+    "Solynx Innovations",
+    "IT company India",
+    "software development company",
+    "web development",
+    "mobile app development",
+    "UI UX design",
+    "AI solutions",
+    "digital transformation",
+    "custom software",
+    "e-commerce development"
+  ],
+  "pages": {
+    "index.html": {
+      "path": "/",
+      "title": "Solynx Innovations | Web, Mobile, AI & Digital Product Company",
+      "description": "Solynx Innovations builds intelligent digital products, immersive web experiences, mobile apps, and scalable technology solutions for ambitious businesses.",
+      "keywords": ["digital product company", "technology solutions", "Solynx", "software engineering", "product design"],
+      "priority": 1.0,
+      "changefreq": "daily",
+      "type": "WebSite"
+    },
+    "about.html": {
+      "path": "/about",
+      "title": "About Solynx Innovations | Technology Studio & Engineering Team",
+      "description": "Learn how Solynx Innovations engineers digital products with craft, systems thinking, and accountable delivery for ambitious organizations.",
+      "keywords": ["about Solynx", "technology studio", "software engineering team", "digital product studio"],
+      "priority": 0.8,
+      "changefreq": "weekly",
+      "type": "AboutPage"
+    },
+    "services.html": {
+      "path": "/services",
+      "title": "IT Services | Web, Mobile, AI, SEO & Software Development - Solynx",
+      "description": "Explore Solynx services: web development, mobile apps, UI/UX, e-commerce, custom software, AI, digital marketing, SEO, testing, and data analytics.",
+      "keywords": ["IT services", "software services", "digital services company", "app development services"],
+      "priority": 0.9,
+      "changefreq": "weekly",
+      "type": "CollectionPage"
+    },
+    "solutions.html": {
+      "path": "/solutions",
+      "title": "Industry Digital Solutions | Startups to Enterprise - Solynx",
+      "description": "Industry-focused digital solutions from Solynx for startups, e-commerce, healthcare, finance, education, retail, logistics, and manufacturing.",
+      "keywords": ["industry solutions", "digital solutions", "sector technology", "enterprise digital products"],
+      "priority": 0.85,
+      "changefreq": "weekly",
+      "type": "CollectionPage"
+    },
+    "portfolio.html": {
+      "path": "/portfolio",
+      "title": "Portfolio | Web, Mobile, AI & Product Case Studies - Solynx",
+      "description": "Browse Solynx portfolio work across web platforms, mobile apps, e-commerce, custom software, UI/UX systems, and AI products.",
+      "keywords": ["portfolio", "case studies", "digital projects", "product case study"],
+      "priority": 0.85,
+      "changefreq": "weekly",
+      "type": "CollectionPage"
+    },
+    "technologies.html": {
+      "path": "/technologies",
+      "title": "Technology Stack | Frontend, Backend, Cloud, AI & DevOps - Solynx",
+      "description": "Discover the Solynx technology ecosystem: React, Node, Flutter, AWS, PostgreSQL, Python, TensorFlow, Docker, Kubernetes, and analytics.",
+      "keywords": ["technology stack", "React Node AWS", "AI ML stack", "DevOps tools"],
+      "priority": 0.8,
+      "changefreq": "weekly",
+      "type": "WebPage"
+    },
+    "careers.html": {
+      "path": "/careers",
+      "title": "Careers at Solynx | Engineering, Design & AI Jobs",
+      "description": "Join Solynx Innovations. Open roles for frontend engineers, product designers, AI engineers, and growth marketers who build with craft.",
+      "keywords": ["Solynx careers", "software jobs", "AI engineer jobs", "product designer jobs"],
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "type": "WebPage"
+    },
+    "contact.html": {
+      "path": "/contact",
+      "title": "Contact Solynx Innovations | Start a Conversation",
+      "description": "Contact Solynx Innovations at support@solynx.in. Tell us about your project goals, timeline, and budget - we respond within one business day.",
+      "keywords": ["contact Solynx", "hire software company", "project inquiry", "support@solynx.in"],
+      "priority": 0.8,
+      "changefreq": "monthly",
+      "type": "ContactPage"
+    },
+    "quote.html": {
+      "path": "/quote",
+      "title": "Get a Quote | Project Estimate from Solynx Innovations",
+      "description": "Request a tailored project quote from Solynx. Share scope, budget, and timeline for websites, apps, software, AI, or marketing engagements.",
+      "keywords": ["get a quote", "project estimate", "software development quote", "app cost estimate"],
+      "priority": 0.85,
+      "changefreq": "monthly",
+      "type": "WebPage"
+    },
+    "web-development.html": {
+      "path": "/services/web-development",
+      "title": "Web Development Company | High-Performance Websites & Web Apps - Solynx",
+      "description": "Solynx builds fast, scalable websites and web applications engineered for conversion, performance, accessibility, and long-term maintainability.",
+      "keywords": ["web development company", "website development", "web app development", "responsive websites"],
+      "priority": 0.85,
+      "changefreq": "monthly",
+      "type": "Service"
+    },
+    "mobile-development.html": {
+      "path": "/services/mobile-app-development",
+      "title": "Mobile App Development | iOS & Android Apps - Solynx",
+      "description": "Native-quality iOS and Android app development by Solynx with resilient backends, polished interaction, and reliable release pipelines.",
+      "keywords": ["mobile app development", "iOS Android apps", "Flutter apps", "cross-platform apps"],
+      "priority": 0.85,
+      "changefreq": "monthly",
+      "type": "Service"
+    },
+    "ui-ux.html": {
+      "path": "/services/ui-ux-design",
+      "title": "UI/UX Design Services | Product Design & Design Systems - Solynx",
+      "description": "Research-led UI/UX design from Solynx: product discovery, interaction design, design systems, prototypes, and motion guidelines.",
+      "keywords": ["UI UX design", "product design", "design systems", "user experience"],
+      "priority": 0.8,
+      "changefreq": "monthly",
+      "type": "Service"
+    },
+    "ecommerce.html": {
+      "path": "/services/ecommerce-development",
+      "title": "E-Commerce Development | Conversion-Focused Online Stores - Solynx",
+      "description": "Build commerce platforms with Solynx: custom storefronts, checkout optimization, payments, inventory integrations, and growth systems.",
+      "keywords": ["ecommerce development", "online store development", "Shopify custom", "headless commerce"],
+      "priority": 0.8,
+      "changefreq": "monthly",
+      "type": "Service"
+    },
+    "software-development.html": {
+      "path": "/services/custom-software-development",
+      "title": "Custom Software Development | Platforms & Internal Tools - Solynx",
+      "description": "Purpose-built software platforms, APIs, integrations, and admin tools from Solynx that match how your organization actually works.",
+      "keywords": ["custom software development", "enterprise software", "internal tools", "platform engineering"],
+      "priority": 0.8,
+      "changefreq": "monthly",
+      "type": "Service"
+    },
+    "ai-solutions.html": {
+      "path": "/services/ai-solutions",
+      "title": "AI Solutions Company | LLM Apps, Automation & ML - Solynx",
+      "description": "Practical AI solutions from Solynx: LLM applications, RAG systems, process automation, predictive models, and production monitoring.",
+      "keywords": ["AI solutions", "LLM applications", "machine learning", "AI automation"],
+      "priority": 0.85,
+      "changefreq": "weekly",
+      "type": "Service"
+    },
+    "digital-marketing.html": {
+      "path": "/services/digital-marketing",
+      "title": "Digital Marketing Services | Performance & Brand Growth - Solynx",
+      "description": "Solynx digital marketing connects creative, media, and measurement into growth systems that turn attention into pipeline.",
+      "keywords": ["digital marketing", "performance marketing", "growth marketing", "brand campaigns"],
+      "priority": 0.75,
+      "changefreq": "monthly",
+      "type": "Service"
+    },
+    "seo.html": {
+      "path": "/services/seo",
+      "title": "SEO Services | Technical SEO & Organic Growth - Solynx",
+      "description": "Technical and content SEO from Solynx that compounds organic visibility: audits, content architecture, Core Web Vitals, and search analytics.",
+      "keywords": ["SEO services", "technical SEO", "organic search", "SEO company"],
+      "priority": 0.8,
+      "changefreq": "weekly",
+      "type": "Service"
+    },
+    "testing.html": {
+      "path": "/services/software-testing",
+      "title": "Software Testing Services | QA Automation & Quality Engineering - Solynx",
+      "description": "Quality engineering from Solynx: test strategy, UI automation, API testing, performance checks, and CI quality gates.",
+      "keywords": ["software testing", "QA automation", "quality engineering", "test automation"],
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "type": "Service"
+    },
+    "data-analytics.html": {
+      "path": "/services/data-analytics",
+      "title": "Data Analytics Services | Dashboards, Pipelines & Insights - Solynx",
+      "description": "Turn operational data into decisions with Solynx analytics: pipelines, metric design, executive dashboards, and forecasting.",
+      "keywords": ["data analytics", "business intelligence", "data pipelines", "dashboards"],
+      "priority": 0.75,
+      "changefreq": "monthly",
+      "type": "Service"
+    },
+    "project-nova.html": {
+      "path": "/portfolio/nova-commerce-os",
+      "title": "Nova Commerce OS Case Study | E-Commerce Platform - Solynx",
+      "description": "Case study: Nova Commerce OS - a scalable commerce platform engineered by Solynx with React, Node, and AWS.",
+      "keywords": ["ecommerce case study", "commerce platform", "Nova Commerce OS"],
+      "priority": 0.6,
+      "changefreq": "monthly",
+      "type": "Article"
+    },
+    "project-pulse.html": {
+      "path": "/portfolio/pulse-health",
+      "title": "Pulse Health Case Study | Healthcare Mobile App - Solynx",
+      "description": "Case study: Pulse Health - a healthcare mobile experience built by Solynx with Flutter and Firebase.",
+      "keywords": ["healthcare app case study", "Flutter mobile app", "Pulse Health"],
+      "priority": 0.6,
+      "changefreq": "monthly",
+      "type": "Article"
+    },
+    "project-atlas.html": {
+      "path": "/portfolio/atlas-insight",
+      "title": "Atlas Insight Case Study | AI Knowledge Product - Solynx",
+      "description": "Case study: Atlas Insight - an AI knowledge and analytics product engineered by Solynx with Python and ML.",
+      "keywords": ["AI case study", "ML product", "Atlas Insight"],
+      "priority": 0.6,
+      "changefreq": "monthly",
+      "type": "Article"
+    },
+    "project-lumen.html": {
+      "path": "/portfolio/lumen-design-system",
+      "title": "Lumen Design System Case Study | Design Ops - Solynx",
+      "description": "Case study: Lumen Design System - a scalable UI system and design ops practice delivered by Solynx.",
+      "keywords": ["design system case study", "design ops", "Lumen"],
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "type": "Article"
+    },
+    "project-orbit.html": {
+      "path": "/portfolio/orbit-logistics",
+      "title": "Orbit Logistics Case Study | Custom Software Platform - Solynx",
+      "description": "Case study: Orbit Logistics - a logistics operations platform built by Solynx with Node and PostgreSQL.",
+      "keywords": ["logistics software", "custom platform case study", "Orbit Logistics"],
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "type": "Article"
+    }
+  }
+}
