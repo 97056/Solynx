@@ -122,12 +122,15 @@
     const wizard = document.getElementById("quote-wizard");
     if (!wizard) return;
 
+    const WHATSAPP_NUMBER = "919705699481";
     const steps = Array.from(wizard.querySelectorAll(".quote-step"));
     const progress = Array.from(wizard.querySelectorAll(".quote-progress__step"));
     const nextBtns = wizard.querySelectorAll("[data-quote-next]");
     const prevBtns = wizard.querySelectorAll("[data-quote-prev]");
+    const reopenBtn = wizard.querySelector("[data-quote-whatsapp]");
     let current = 0;
     const data = {};
+    let lastWhatsAppUrl = "";
 
     function show(index) {
       steps.forEach((s, i) => s.classList.toggle("is-active", i === index));
@@ -138,12 +141,49 @@
       current = index;
     }
 
+    function collectStepInputs(step) {
+      step.querySelectorAll("input, select, textarea").forEach((inp) => {
+        if (!inp.name) return;
+        data[inp.name] = (inp.value || "").trim();
+      });
+    }
+
+    function openQuoteWhatsApp() {
+      const lines = [
+        "Hello Solynx Innovations,",
+        "",
+        "I completed the quote wizard on the website:",
+        "",
+        "Service: " + (data.needLabel || data.need || "—"),
+        "Project: " + (data.title || "—"),
+        "",
+        "Details:",
+        data.details || "—",
+        "",
+        "Budget: " + (data.budgetLabel || data.budget || "—"),
+        "Timeline: " + (data.timelineLabel || data.timeline || "—"),
+        "",
+        "Name: " + (data.name || "—"),
+        "Email: " + (data.email || "—"),
+        data.phone ? "Phone: " + data.phone : null,
+        data.company ? "Company: " + data.company : null,
+      ].filter(function (line) {
+        return line !== null;
+      });
+
+      lastWhatsAppUrl = buildWhatsAppUrl(WHATSAPP_NUMBER, lines.join("\n"));
+      window.open(lastWhatsAppUrl, "_blank", "noopener,noreferrer");
+      return lastWhatsAppUrl;
+    }
+
     wizard.querySelectorAll(".quote-option").forEach((opt) => {
       opt.addEventListener("click", () => {
         const group = opt.closest(".quote-options");
         group.querySelectorAll(".quote-option").forEach((o) => o.classList.remove("is-selected"));
         opt.classList.add("is-selected");
-        data[group.getAttribute("data-field")] = opt.getAttribute("data-value");
+        const field = group.getAttribute("data-field");
+        data[field] = opt.getAttribute("data-value");
+        data[field + "Label"] = (opt.textContent || "").trim();
       });
     });
 
@@ -156,13 +196,22 @@
           setTimeout(() => fieldGroup.classList.remove("shake"), 400);
           return;
         }
-        const inputs = step.querySelectorAll("input[required], select[required], textarea[required]");
+
+        const required = step.querySelectorAll("input[required], select[required], textarea[required]");
         let ok = true;
-        inputs.forEach((inp) => {
+        required.forEach((inp) => {
           if (!validateField(inp)) ok = false;
-          else data[inp.name] = inp.value;
         });
         if (!ok) return;
+
+        collectStepInputs(step);
+
+        // Leaving contact step (5th) → open WhatsApp, then show confirmation
+        if (current === steps.length - 2) {
+          openQuoteWhatsApp();
+          show(current + 1);
+          return;
+        }
 
         if (current < steps.length - 1) show(current + 1);
       });
@@ -173,6 +222,14 @@
         if (current > 0) show(current - 1);
       });
     });
+
+    if (reopenBtn) {
+      reopenBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (!lastWhatsAppUrl) openQuoteWhatsApp();
+        else window.open(lastWhatsAppUrl, "_blank", "noopener,noreferrer");
+      });
+    }
 
     show(0);
   }
