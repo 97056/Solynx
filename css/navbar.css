@@ -48,19 +48,21 @@
 }
 
 .brand-logo__mark {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   position: relative;
   flex-shrink: 0;
-  border-radius: 10px;
+  border-radius: 11px;
   overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .brand-logo__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   display: block;
 }
 

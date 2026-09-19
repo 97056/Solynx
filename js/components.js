@@ -3,10 +3,14 @@
 
   const BRAND = {
     logoDark: "assets/brand/logo-dark.png",
-    iconLight: "assets/brand/favicon-light.png",
-    iconDark: "assets/brand/favicon-dark.png",
-    favicon: "assets/brand/favicon-dark.png",
-    appleTouch: "assets/brand/favicon-dark.png",
+    iconLight: "assets/brand/mark-light-96.png",
+    iconLightSrcSet: "assets/brand/mark-light-48.png 1x, assets/brand/mark-light-96.png 2x, assets/brand/mark-light-144.png 3x",
+    iconDark: "assets/brand/mark-dark-96.png",
+    iconDarkSrcSet: "assets/brand/mark-dark-48.png 1x, assets/brand/mark-dark-96.png 2x",
+    favicon: "assets/brand/favicon-32.png",
+    favicon48: "assets/brand/favicon-48.png",
+    faviconLight: "assets/brand/favicon-light-32.png",
+    appleTouch: "assets/brand/mark-dark-96.png",
   };
 
   const SOCIAL = [
@@ -289,9 +293,9 @@
 
     [
       { rel: "icon", type: "image/png", href: BRAND.favicon, sizes: "32x32" },
-      { rel: "icon", type: "image/png", href: BRAND.iconLight, media: "(prefers-color-scheme: dark)" },
-      { rel: "icon", type: "image/png", href: BRAND.iconDark, media: "(prefers-color-scheme: light)" },
-      { rel: "apple-touch-icon", href: BRAND.appleTouch },
+      { rel: "icon", type: "image/png", href: BRAND.favicon48, sizes: "48x48" },
+      { rel: "icon", type: "image/png", href: BRAND.faviconLight, sizes: "32x32", media: "(prefers-color-scheme: dark)" },
+      { rel: "apple-touch-icon", href: BRAND.appleTouch, sizes: "96x96" },
     ].forEach(function (t) {
       const link = document.createElement("link");
       Object.keys(t).forEach(function (k) {
@@ -307,10 +311,14 @@
       '<span class="brand-logo__mark">' +
       '<img class="brand-logo__img brand-logo__img--on-dark" src="' +
       BRAND.iconLight +
-      '" alt="" width="40" height="40" decoding="async">' +
+      '" srcset="' +
+      BRAND.iconLightSrcSet +
+      '" sizes="44px" width="44" height="44" alt="" decoding="async">' +
       '<img class="brand-logo__img brand-logo__img--on-light" src="' +
       BRAND.iconDark +
-      '" alt="" width="40" height="40" decoding="async">' +
+      '" srcset="' +
+      BRAND.iconDarkSrcSet +
+      '" sizes="44px" width="44" height="44" alt="" decoding="async">' +
       "</span>"
     );
   }
