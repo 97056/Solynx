@@ -330,7 +330,8 @@
       '" alt="Solynx Innovations" width="200" height="56" decoding="async"></a>' +
       "<p>Engineering intelligent digital products, immersive experiences, and scalable technology for ambitious businesses.</p>" +
       socialLinksHtml() +
-      "</div>" +      '<div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="careers.html">Careers</a></li></ul></div>' +
+      "</div>" +
+      '<div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="careers.html">Careers</a></li></ul></div>' +
       '<div class="footer-col"><h4>Services</h4><ul><li><a href="web-development.html">Web Development</a></li><li><a href="mobile-development.html">Mobile Apps</a></li><li><a href="ui-ux.html">UI/UX Design</a></li><li><a href="ai-solutions.html">AI Solutions</a></li><li><a href="ecommerce.html">E-Commerce</a></li></ul></div>' +
       '<div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:support@solynx.in">support@solynx.in</a></li><li><a href="contact.html">Contact form</a></li><li><a href="quote.html">Get a quote</a></li><li><a href="solutions.html">Industries</a></li><li><a href="technologies.html">Technologies</a></li></ul></div>' +
       '</div><div class="footer-bottom"><p>&copy; ' +
