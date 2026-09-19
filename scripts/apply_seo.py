@@ -157,37 +157,31 @@ def _esc(value: str) -> str:
     )
 
 
-def rewrite_internal_links(html: str, pages: dict) -> str:
-    """Rewrite href=\"file.html\" to clean paths for SEO-friendly navigation."""
-    mapping = {name: meta["path"] for name, meta in pages.items()}
-
-    def repl(match: re.Match) -> str:
-        name = match.group(2)
-        clean = mapping.get(name)
-        if not clean:
-            return match.group(0)
-        return f"{match.group(1)}{clean}{match.group(3)}"
-
-    return re.sub(
-        r'(href=["\'])([A-Za-z0-9._-]+\.html)(["\'])',
-        repl,
-        html,
-        flags=re.I,
-    )
+def strip_base_href(head: str) -> str:
+    """Remove <base href> — it breaks local file:// previews (CSS resolves to drive root)."""
+    return re.sub(r'<base\s+href=["\'][^"\']*["\']\s*/?>\s*', "", head, flags=re.I)
 
 
-def ensure_base_href(head: str) -> str:
-    """Root base so nested clean URLs still load /css /js /assets."""
-    pattern = re.compile(r'<base\s+href=["\'][^"\']*["\']\s*/?>', re.I)
-    tag = '<base href="/">'
-    if pattern.search(head):
-        return pattern.sub(tag, head, count=1)
-    # after charset if present
-    charset = re.search(r'<meta\s+charset=["\'][^"\']*["\']\s*/?>', head, re.I)
-    if charset:
-        i = charset.end()
-        return head[:i] + "\n  " + tag + head[i:]
-    return head.replace("<head>", "<head>\n  " + tag, 1)
+def restore_html_links(html: str, pages: dict) -> str:
+    """Keep in-page links as *.html so local file:// and flat hosting work.
+    Clean SEO URLs stay in canonical / sitemap / redirects only.
+    """
+    reverse = {meta["path"]: name for name, meta in pages.items()}
+    paths = sorted(reverse.keys(), key=len, reverse=True)
+
+    for clean in paths:
+        file_name = reverse[clean]
+        if clean == "/":
+            html = re.sub(r'(href=["\'])/(["\'])', rf"\1{file_name}\2", html)
+            continue
+        esc = re.escape(clean)
+        html = re.sub(
+            rf'(href=["\']){esc}/?(["\'])',
+            rf"\1{file_name}\2",
+            html,
+            flags=re.I,
+        )
+    return html
 
 
 def apply_page(path: Path, site: dict, page: dict, keywords: list[str], pages: dict) -> None:
@@ -201,7 +195,7 @@ def apply_page(path: Path, site: dict, page: dict, keywords: list[str], pages: d
     clean_url = site["url"].rstrip("/") + page["path"]
     kw = ", ".join(keywords)
 
-    head = ensure_base_href(head)
+    head = strip_base_href(head)
     head = upsert_title(head, page["title"])
     head = upsert_meta(head, "name", "description", page["description"])
     head = upsert_meta(head, "name", "keywords", kw)
@@ -228,7 +222,7 @@ def apply_page(path: Path, site: dict, page: dict, keywords: list[str], pages: d
         head = upsert_meta(head, "name", "twitter:site", site["twitter"])
 
     html = html[: m.start()] + head + html[m.end() :]
-    html = rewrite_internal_links(html, pages)
+    html = restore_html_links(html, pages)
     ld = build_json_ld(site, path.name, page, keywords)
     html = upsert_json_ld(html, ld)
     path.write_text(html, encoding="utf-8")

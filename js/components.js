@@ -12,15 +12,16 @@
   const ARROW =
     '<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span>';
 
+  // Use .html links so local file:// preview works; live site still has clean SEO URLs via redirects + canonical.
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/services", label: "Services" },
-    { href: "/solutions", label: "Solutions" },
-    { href: "/portfolio", label: "Portfolio" },
-    { href: "/technologies", label: "Technologies" },
-    { href: "/about", label: "About" },
-    { href: "/careers", label: "Careers" },
-    { href: "/contact", label: "Contact" },
+    { href: "index.html", label: "Home" },
+    { href: "services.html", label: "Services" },
+    { href: "solutions.html", label: "Solutions" },
+    { href: "portfolio.html", label: "Portfolio" },
+    { href: "technologies.html", label: "Technologies" },
+    { href: "about.html", label: "About" },
+    { href: "careers.html", label: "Careers" },
+    { href: "contact.html", label: "Contact" },
   ];
 
   const PAGE_VISUALS = {
@@ -254,13 +255,13 @@
     mount.innerHTML =
       '<nav class="navbar-solynx" aria-label="Primary">' +
       '<div class="container-solynx">' +
-      '<a class="brand-logo" href="/" aria-label="Solynx Innovations home">' +
+      '<a class="brand-logo" href="index.html" aria-label="Solynx Innovations home">' +
       brandMark() +
       '<span class="brand-logo__text"><span class="brand-logo__name">Solynx</span><span class="brand-logo__tag">Innovations</span></span>' +
       "</a>" +
       '<div class="nav-desktop">' +
       desktop +
-      '<a class="btn-solynx btn-solynx--primary nav-cta" href="/quote" data-magnetic>Start a Project</a>' +
+      '<a class="btn-solynx btn-solynx--primary nav-cta" href="quote.html" data-magnetic>Start a Project</a>' +
       "</div>" +
       '<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay"><span></span></button>' +
       "</div></nav>" +
@@ -268,7 +269,7 @@
       '<div class="nav-overlay__list">' +
       mobile +
       "</div>" +
-      '<div class="nav-overlay__cta"><a class="btn-solynx btn-solynx--primary btn-solynx--lg" href="/quote">Start a Project ' +
+      '<div class="nav-overlay__cta"><a class="btn-solynx btn-solynx--primary btn-solynx--lg" href="quote.html">Start a Project ' +
       ARROW +
       "</a></div></div>";
 
@@ -282,15 +283,15 @@
     mount.innerHTML =
       '<div class="footer-marquee" aria-hidden="true"><span>SOLYNX INNOVATIONS — BUILD WHAT\'S NEXT — SOLYNX INNOVATIONS — BUILD WHAT\'S NEXT — </span><span>SOLYNX INNOVATIONS — BUILD WHAT\'S NEXT — SOLYNX INNOVATIONS — BUILD WHAT\'S NEXT — </span></div>' +
       '<div class="container-solynx"><div class="footer-grid">' +
-      '<div class="footer-brand"><a class="brand-logo brand-logo--footer" href="/" aria-label="Solynx Innovations home">' +
+      '<div class="footer-brand"><a class="brand-logo brand-logo--footer" href="index.html" aria-label="Solynx Innovations home">' +
       '<img class="brand-logo__wordmark" src="' +
       BRAND.logoDark +
       '" alt="Solynx Innovations" width="200" height="56" decoding="async"></a>' +
       "<p>Engineering intelligent digital products, immersive experiences, and scalable technology for ambitious businesses.</p>" +
       '<div class="footer-social"><a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a><a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X">X</a><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">ig</a></div></div>' +
-      '<div class="footer-col"><h4>Navigate</h4><ul><li><a href="/">Home</a></li><li><a href="/about">About</a></li><li><a href="/services">Services</a></li><li><a href="/portfolio">Portfolio</a></li><li><a href="/careers">Careers</a></li></ul></div>' +
-      '<div class="footer-col"><h4>Services</h4><ul><li><a href="/services/web-development">Web Development</a></li><li><a href="/services/mobile-app-development">Mobile Apps</a></li><li><a href="/services/ui-ux-design">UI/UX Design</a></li><li><a href="/services/ai-solutions">AI Solutions</a></li><li><a href="/services/ecommerce-development">E-Commerce</a></li></ul></div>' +
-      '<div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:support@solynx.in">support@solynx.in</a></li><li><a href="/contact">Contact form</a></li><li><a href="/quote">Get a quote</a></li><li><a href="/solutions">Industries</a></li><li><a href="/technologies">Technologies</a></li></ul></div>' +
+      '<div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="careers.html">Careers</a></li></ul></div>' +
+      '<div class="footer-col"><h4>Services</h4><ul><li><a href="web-development.html">Web Development</a></li><li><a href="mobile-development.html">Mobile Apps</a></li><li><a href="ui-ux.html">UI/UX Design</a></li><li><a href="ai-solutions.html">AI Solutions</a></li><li><a href="ecommerce.html">E-Commerce</a></li></ul></div>' +
+      '<div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:support@solynx.in">support@solynx.in</a></li><li><a href="contact.html">Contact form</a></li><li><a href="quote.html">Get a quote</a></li><li><a href="solutions.html">Industries</a></li><li><a href="technologies.html">Technologies</a></li></ul></div>' +
       '</div><div class="footer-bottom"><p>&copy; ' +
       new Date().getFullYear() +
       ' Solynx Innovations. All rights reserved.</p><p><a href="mailto:support@solynx.in">support@solynx.in</a></p></div></div>';
