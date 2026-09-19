@@ -124,34 +124,24 @@
   border-radius: 28% 28% 32% 32%;
   border: 1px solid rgba(0, 229, 192, 0.55);
   background:
-    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.35), transparent 40%),
-    linear-gradient(145deg, #00e5c0, #0a3d4a 50%, #05070d);
+    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.28), transparent 42%),
+    linear-gradient(145deg, #00e5c0, #0a3d4a 48%, #05070d);
   box-shadow:
     0 0 50px rgba(0, 229, 192, 0.45),
     0 0 100px rgba(58, 160, 255, 0.2),
     inset 0 0 30px rgba(255, 255, 255, 0.12);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  padding: 14%;
   animation: corePulse 4s ease-in-out infinite;
 }
 
-.hero-stage__brand {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(1.4rem, 3vw, 1.85rem);
-  letter-spacing: 0.08em;
-  color: #05070d;
-  line-height: 1;
-}
-
-.hero-stage__core-inner small {
-  margin-top: 0.2rem;
-  font-size: 0.62rem;
-  letter-spacing: 0.22em;
-  color: rgba(5, 7, 13, 0.7);
-  font-weight: 700;
+.hero-stage__logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35));
 }
 
 .hero-stage__beam {
@@ -219,6 +209,8 @@
   background: rgba(5, 7, 13, 0.75);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-stage__frame--web {
@@ -270,22 +262,47 @@
 }
 
 .hero-stage__frame-body {
-  padding: 10px;
-  display: grid;
-  gap: 6px;
-}
-
-.hero-stage__frame-body span {
+  flex: 1;
+  min-height: 0;
+  padding: 0;
   display: block;
-  height: 7px;
-  border-radius: 2px;
-  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  position: relative;
+  background: rgba(5, 7, 13, 0.45);
 }
 
-.hero-stage__frame-body span:first-child {
-  width: 60%;
-  height: 10px;
-  background: rgba(0, 229, 192, 0.28);
+.hero-stage__code-scroll {
+  position: absolute;
+  inset: 0.35rem 0.4rem;
+  overflow: hidden;
+  font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.52rem;
+  line-height: 1.45;
+  color: rgba(164, 220, 255, 0.9);
+  mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+.hero-stage__code-scroll pre {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  animation: heroCodeScroll 14s linear infinite;
+}
+
+.hero-stage__code-scroll--mobile {
+  font-size: 0.48rem;
+  color: rgba(124, 245, 212, 0.92);
+}
+
+.hero-stage__code-scroll--mobile pre {
+  animation-duration: 11s;
+  animation-direction: reverse;
+}
+
+.hero-stage__code-scroll code {
+  font: inherit;
+  color: inherit;
 }
 
 .hero-stage__code {
@@ -324,6 +341,11 @@
 @keyframes corePulse {
   0%, 100% { transform: scale(1); box-shadow: 0 0 60px rgba(0, 229, 192, 0.45), 0 0 120px rgba(58, 160, 255, 0.2); }
   50% { transform: scale(1.05); box-shadow: 0 0 80px rgba(0, 229, 192, 0.6), 0 0 140px rgba(58, 160, 255, 0.3); }
+}
+
+@keyframes heroCodeScroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
 }
 
 @keyframes ringSpin {
@@ -369,7 +391,8 @@
   .hero-stage__orbit,
   .hero-stage__hud,
   .hero-stage__frame,
-  .hero-stage__glow {
+  .hero-stage__glow,
+  .hero-stage__code-scroll pre {
     animation: none !important;
   }
 }

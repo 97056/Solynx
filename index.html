@@ -61,8 +61,7 @@
 
             <div class="hero-stage__core">
               <div class="hero-stage__core-inner">
-                <span class="hero-stage__brand">SX</span>
-                <small>CORE</small>
+                <img class="hero-stage__logo" src="assets/brand/mark-light-96.png" srcset="assets/brand/mark-light-48.png 1x, assets/brand/mark-light-96.png 2x, assets/brand/mark-light-144.png 3x" width="72" height="72" alt="Solynx" decoding="async">
               </div>
               <div class="hero-stage__beam"></div>
             </div>
@@ -90,13 +89,57 @@
             <div class="hero-stage__frame hero-stage__frame--web">
               <div class="hero-stage__frame-bar"><i></i><i></i><i></i></div>
               <div class="hero-stage__frame-body">
-                <span></span><span></span><span></span>
+                <div class="hero-stage__code-scroll">
+                  <pre><code>const solynx = createApp({
+  brand: "Solynx",
+  mode: "next",
+});
+
+await solynx.boot({
+  ui: true,
+  ai: true,
+  analytics: true,
+});
+
+solynx.ship("web");
+// build complete ✓</code></pre>
+                  <pre aria-hidden="true"><code>const solynx = createApp({
+  brand: "Solynx",
+  mode: "next",
+});
+
+await solynx.boot({
+  ui: true,
+  ai: true,
+  analytics: true,
+});
+
+solynx.ship("web");
+// build complete ✓</code></pre>
+                </div>
               </div>
             </div>
             <div class="hero-stage__frame hero-stage__frame--mobile">
               <div class="hero-stage__notch"></div>
               <div class="hero-stage__frame-body">
-                <span></span><span></span>
+                <div class="hero-stage__code-scroll hero-stage__code-scroll--mobile">
+                  <pre><code>flutter run
+> compiling...
+> hot reload
+App.build()
+  Screen.render()
+  API.fetch()
+  State.update()
+✓ ready on device</code></pre>
+                  <pre aria-hidden="true"><code>flutter run
+> compiling...
+> hot reload
+App.build()
+  Screen.render()
+  API.fetch()
+  State.update()
+✓ ready on device</code></pre>
+                </div>
               </div>
             </div>
 
