@@ -356,7 +356,7 @@
 /* Tech ecosystem interactive */
 .tech-map {
   position: relative;
-  min-height: 480px;
+  min-height: 640px;
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   background: var(--bg-secondary);
