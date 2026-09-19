@@ -9,6 +9,47 @@
     appleTouch: "assets/brand/favicon-dark.png",
   };
 
+  const SOCIAL = [
+    {
+      label: "Facebook",
+      href: "https://www.facebook.com/people/Solynx-Innovations/pfbid02bRsUAGiWi2rkX8Bz75n6KQUxknp6r1ixQ6229r5eTXf2U44yKRucvU496kGERSuhl/",
+      icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 8.2h2.4V5.1c-.4-.1-1.5-.2-2.8-.2-2.8 0-4.7 1.7-4.7 4.8V12H6.5v3.4h2.4V22h3.5v-6.6h2.7l.5-3.4h-3.2V10c0-1 .3-1.8 1.6-1.8z"/></svg>',
+    },
+    {
+      label: "Instagram",
+      href: "https://www.instagram.com/solynx.innovations/",
+      icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 7.2A4.8 4.8 0 1 0 12 16.8 4.8 4.8 0 0 0 12 7.2zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zm5.3-8.2a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM12 4.4c-2.1 0-2.3 0-3.2.1-2.1.1-3.9 1.9-4 4-.1.9-.1 1.1-.1 3.2s0 2.3.1 3.2c.1 2.1 1.9 3.9 4 4 .9.1 1.1.1 3.2.1s2.3 0 3.2-.1c2.1-.1 3.9-1.9 4-4 .1-.9.1-1.1.1-3.2s0-2.3-.1-3.2c-.1-2.1-1.9-3.9-4-4-.9-.1-1.1-.1-3.2-.1zm0 1.5c2 0 2.3 0 3.1.1 1.6.1 2.9 1.4 3 3 .1.8.1 1 .1 3s0 2.2-.1 3c-.1 1.6-1.4 2.9-3 3-.8.1-1 .1-3.1.1s-2.3 0-3.1-.1c-1.6-.1-2.9-1.4-3-3-.1-.8-.1-1-.1-3s0-2.2.1-3c.1-1.6 1.4-2.9 3-3 .8-.1 1.1-.1 3.1-.1z"/></svg>',
+    },
+    {
+      label: "X",
+      href: "https://x.com/solynxinno",
+      icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 3h3.1l-6.8 7.8L22 21h-5.8l-4.5-5.9L6.4 21H3.3l7.3-8.3L2 3h6l4.1 5.4L17.5 3zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5z"/></svg>',
+    },
+    {
+      label: "YouTube",
+      href: "https://www.youtube.com/@Solynx-s3u",
+      icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22.5 7.2a3 3 0 0 0-2.1-2.1C18.6 4.6 12 4.6 12 4.6s-6.6 0-8.4.5A3 3 0 0 0 1.5 7.2 31.5 31.5 0 0 0 1 12a31.5 31.5 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.8.5 8.4.5 8.4.5s6.6 0 8.4-.5a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 23 12a31.5 31.5 0 0 0-.5-4.8zM9.8 15.2V8.8L15.7 12l-5.9 3.2z"/></svg>',
+    },
+  ];
+
+  function socialLinksHtml() {
+    return (
+      '<div class="footer-social">' +
+      SOCIAL.map(function (s) {
+        return (
+          '<a href="' +
+          s.href +
+          '" target="_blank" rel="noopener noreferrer" aria-label="' +
+          s.label +
+          '">' +
+          s.icon +
+          "</a>"
+        );
+      }).join("") +
+      "</div>"
+    );
+  }
+
   const ARROW =
     '<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span>';
 
@@ -288,8 +329,8 @@
       BRAND.logoDark +
       '" alt="Solynx Innovations" width="200" height="56" decoding="async"></a>' +
       "<p>Engineering intelligent digital products, immersive experiences, and scalable technology for ambitious businesses.</p>" +
-      '<div class="footer-social"><a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a><a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X">X</a><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">ig</a></div></div>' +
-      '<div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="careers.html">Careers</a></li></ul></div>' +
+      socialLinksHtml() +
+      "</div>" +      '<div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="careers.html">Careers</a></li></ul></div>' +
       '<div class="footer-col"><h4>Services</h4><ul><li><a href="web-development.html">Web Development</a></li><li><a href="mobile-development.html">Mobile Apps</a></li><li><a href="ui-ux.html">UI/UX Design</a></li><li><a href="ai-solutions.html">AI Solutions</a></li><li><a href="ecommerce.html">E-Commerce</a></li></ul></div>' +
       '<div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:support@solynx.in">support@solynx.in</a></li><li><a href="contact.html">Contact form</a></li><li><a href="quote.html">Get a quote</a></li><li><a href="solutions.html">Industries</a></li><li><a href="technologies.html">Technologies</a></li></ul></div>' +
       '</div><div class="footer-bottom"><p>&copy; ' +

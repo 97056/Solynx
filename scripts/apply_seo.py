@@ -49,7 +49,7 @@ def build_json_ld(site: dict, page_file: str, page: dict, keywords: list[str]) -
                 "url": site["url"],
                 "email": site.get("email"),
                 "logo": site.get("ogImage"),
-                "sameAs": [],
+                "sameAs": site.get("sameAs") or [],
             },
             {
                 "@type": "WebSite",
