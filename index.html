@@ -15,6 +15,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/brand/favicon-dark.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/brand/favicon-light.png" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="assets/brand/favicon-dark.png" media="(prefers-color-scheme: light)">
+  <link rel="apple-touch-icon" href="assets/brand/favicon-dark.png">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -31,24 +35,66 @@
             <h1 class="hero__title" data-animate="fade-up">WE BUILD WHAT'S NEXT.</h1>
             <p class="hero__text" data-animate="fade-up">Solynx Innovations creates intelligent digital products, immersive experiences, and scalable technology solutions for ambitious businesses.</p>
             <div class="btn-group-solynx" data-animate="fade-up">
-              <a class="btn-solynx btn-solynx--primary btn-solynx--lg" href="quote.html" data-magnetic>Start a Project <span class="btn-arrow">→</span></a>
+              <a class="btn-solynx btn-solynx--primary btn-solynx--lg" href="quote.html" data-magnetic>Start a Project <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></a>
               <a class="btn-solynx btn-solynx--secondary btn-solynx--lg" href="portfolio.html">Explore Our Work</a>
             </div>
           </div>
-          <div class="hero-3d" data-animate="scale" aria-hidden="true">
-            <div class="hero-3d__stage">
-              <div class="hero-3d__ring hero-3d__ring--1"></div>
-              <div class="hero-3d__ring hero-3d__ring--2"></div>
-              <div class="hero-3d__ring hero-3d__ring--3"></div>
-              <div class="hero-3d__core"></div>
-              <span class="hero-3d__node"></span>
-              <span class="hero-3d__node"></span>
-              <span class="hero-3d__node"></span>
-              <span class="hero-3d__node"></span>
-              <div class="hero-3d__panel hero-3d__panel--1">Latency<strong>12ms</strong></div>
-              <div class="hero-3d__panel hero-3d__panel--2">Systems<strong>Online</strong></div>
-              <div class="hero-3d__panel hero-3d__panel--3">Intelligence<strong>Active</strong></div>
+          <div class="hero-stage" data-animate="scale" aria-hidden="true">
+            <div class="hero-stage__glow"></div>
+            <div class="hero-stage__orbit hero-stage__orbit--a"></div>
+            <div class="hero-stage__orbit hero-stage__orbit--b"></div>
+            <div class="hero-stage__orbit hero-stage__orbit--c"></div>
+
+            <div class="hero-stage__core">
+              <div class="hero-stage__core-inner">
+                <span class="hero-stage__brand">SX</span>
+                <small>CORE</small>
+              </div>
+              <div class="hero-stage__beam"></div>
             </div>
+
+            <div class="hero-stage__hud hero-stage__hud--latency">
+              <span>Latency</span>
+              <strong>12ms</strong>
+              <em></em>
+            </div>
+            <div class="hero-stage__hud hero-stage__hud--systems">
+              <span>Systems</span>
+              <strong>Online</strong>
+              <em></em>
+            </div>
+            <div class="hero-stage__hud hero-stage__hud--ai">
+              <span>Intelligence</span>
+              <strong>Active</strong>
+              <em></em>
+            </div>
+            <div class="hero-stage__hud hero-stage__hud--build">
+              <span>Build</span>
+              <strong>v3.2</strong>
+            </div>
+
+            <div class="hero-stage__frame hero-stage__frame--web">
+              <div class="hero-stage__frame-bar"><i></i><i></i><i></i></div>
+              <div class="hero-stage__frame-body">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="hero-stage__frame hero-stage__frame--mobile">
+              <div class="hero-stage__notch"></div>
+              <div class="hero-stage__frame-body">
+                <span></span><span></span>
+              </div>
+            </div>
+
+            <div class="hero-stage__code">
+              <code>solynx.init({ mode: "next" })</code>
+            </div>
+
+            <span class="hero-stage__node hero-stage__node--1"></span>
+            <span class="hero-stage__node hero-stage__node--2"></span>
+            <span class="hero-stage__node hero-stage__node--3"></span>
+            <span class="hero-stage__node hero-stage__node--4"></span>
+            <span class="hero-stage__node hero-stage__node--5"></span>
           </div>
         </div>
       </div>
@@ -88,7 +134,7 @@
               <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="26" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 16h36M18 36h12" stroke="currentColor" stroke-width="1.5"/></svg></div>
               <h3 class="service-card__title">Web Development</h3>
               <p class="service-card__desc">High-performance websites and web apps built for speed, scale, and conversion.</p>
-              <span class="service-card__link">Explore <span>→</span></span>
+              <span class="service-card__link">Explore <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></span>
             </a>
           </div>
           <div class="col-md-6 col-xl-4">
@@ -98,7 +144,7 @@
               <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><rect x="14" y="6" width="20" height="36" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="24" cy="36" r="1.5" fill="currentColor"/></svg></div>
               <h3 class="service-card__title">Mobile App Development</h3>
               <p class="service-card__desc">Native-quality iOS and Android experiences with seamless product flows.</p>
-              <span class="service-card__link">Explore <span>→</span></span>
+              <span class="service-card__link">Explore <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></span>
             </a>
           </div>
           <div class="col-md-6 col-xl-4">
@@ -108,7 +154,7 @@
               <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><path d="M8 32l12-20 12 20H8z" stroke="currentColor" stroke-width="1.5"/><circle cx="34" cy="16" r="6" stroke="currentColor" stroke-width="1.5"/></svg></div>
               <h3 class="service-card__title">UI/UX Design</h3>
               <p class="service-card__desc">Interfaces that feel inevitable — research-led, visually precise, interaction-rich.</p>
-              <span class="service-card__link">Explore <span>→</span></span>
+              <span class="service-card__link">Explore <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></span>
             </a>
           </div>
           <div class="col-md-6 col-xl-4">
@@ -118,7 +164,7 @@
               <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><path d="M8 12h4l4 20h20l4-14H16" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="38" r="2" fill="currentColor"/><circle cx="34" cy="38" r="2" fill="currentColor"/></svg></div>
               <h3 class="service-card__title">E-Commerce Development</h3>
               <p class="service-card__desc">Commerce systems designed to convert, personalize, and grow revenue.</p>
-              <span class="service-card__link">Explore <span>→</span></span>
+              <span class="service-card__link">Explore <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></span>
             </a>
           </div>
           <div class="col-md-6 col-xl-4">
@@ -128,7 +174,7 @@
               <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><path d="M10 14l8 10-8 10M22 34h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
               <h3 class="service-card__title">Custom Software</h3>
               <p class="service-card__desc">Purpose-built platforms and internal tools that fit how your business operates.</p>
-              <span class="service-card__link">Explore <span>→</span></span>
+              <span class="service-card__link">Explore <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></span>
             </a>
           </div>
           <div class="col-md-6 col-xl-4">
@@ -138,7 +184,7 @@
               <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11 11l4 4M33 33l4 4M11 37l4-4M33 15l4-4" stroke="currentColor" stroke-width="1.5"/></svg></div>
               <h3 class="service-card__title">AI Solutions</h3>
               <p class="service-card__desc">Practical intelligence — automation, prediction, and product features that compound.</p>
-              <span class="service-card__link">Explore <span>→</span></span>
+              <span class="service-card__link">Explore <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></span>
             </a>
           </div>
           <div class="col-md-6 col-xl-4">
@@ -148,7 +194,7 @@
               <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><path d="M8 34l8-10 8 6 10-16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="34" cy="14" r="3" stroke="currentColor" stroke-width="1.5"/></svg></div>
               <h3 class="service-card__title">Digital Marketing</h3>
               <p class="service-card__desc">Performance campaigns and brand systems that turn attention into pipeline.</p>
-              <span class="service-card__link">Explore <span>→</span></span>
+              <span class="service-card__link">Explore <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></span>
             </a>
           </div>
           <div class="col-md-6 col-xl-4">
@@ -158,7 +204,7 @@
               <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><circle cx="22" cy="22" r="12" stroke="currentColor" stroke-width="1.5"/><path d="M31 31l9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
               <h3 class="service-card__title">SEO</h3>
               <p class="service-card__desc">Technical and content SEO that compounds organic visibility over time.</p>
-              <span class="service-card__link">Explore <span>→</span></span>
+              <span class="service-card__link">Explore <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></span>
             </a>
           </div>
           <div class="col-md-6 col-xl-4">
@@ -168,7 +214,7 @@
               <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><path d="M16 8h16v8l-6 8v12l-4 2V24l-6-8V8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
               <h3 class="service-card__title">Software Testing</h3>
               <p class="service-card__desc">Quality engineering that protects release velocity without slowing teams down.</p>
-              <span class="service-card__link">Explore <span>→</span></span>
+              <span class="service-card__link">Explore <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></span>
             </a>
           </div>
           <div class="col-md-6 col-xl-4">
@@ -178,7 +224,7 @@
               <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><path d="M10 36V20M20 36V12M30 36V24M40 36V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
               <h3 class="service-card__title">Data Analytics</h3>
               <p class="service-card__desc">Clear signals from complex data — dashboards, pipelines, and decision systems.</p>
-              <span class="service-card__link">Explore <span>→</span></span>
+              <span class="service-card__link">Explore <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></span>
             </a>
           </div>
         </div>
@@ -235,7 +281,7 @@
           <div class="tech-node" data-animate="scale"><span class="tech-node__dot"></span><span class="tech-node__label">Analytics</span><span class="tech-node__cat">Insight</span></div>
         </div>
         <div class="mt-4" data-animate="fade-up">
-          <a class="btn-solynx btn-solynx--secondary" href="technologies.html">Explore technologies <span class="btn-arrow">→</span></a>
+          <a class="btn-solynx btn-solynx--secondary" href="technologies.html">Explore technologies <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></a>
         </div>
       </div>
     </section>
@@ -243,7 +289,7 @@
     <!-- WHY SOLYNX -->
     <section class="section">
       <div class="container-solynx">
-        <h2 class="why-statement" data-animate="clip">WE TURN IDEAS INTO DIGITAL ADVANTAGE.</h2>
+        <h2 class="why-statement" data-animate="fade-up">WE TURN IDEAS INTO DIGITAL ADVANTAGE.</h2>
         <div class="row g-4">
           <div class="col-md-6 col-lg-4" data-animate="fade-up">
             <div class="feature-block">
@@ -307,52 +353,52 @@
             <p class="eyebrow" data-animate="fade-up">Selected work</p>
             <h2 class="section-heading" data-animate="fade-up">Projects with presence.</h2>
           </div>
-          <a class="btn-solynx btn-solynx--secondary" href="portfolio.html" data-animate="fade-up">View all work <span class="btn-arrow">→</span></a>
+          <a class="btn-solynx btn-solynx--secondary" href="portfolio.html" data-animate="fade-up">View all work <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></a>
         </div>
         <div class="portfolio-masonry" data-stagger>
-          <a class="project-card project-card--tall" href="project-nova.html" data-category="web">
-            <div class="project-card__media"><div class="project-card__visual"></div></div>
+          <a class="project-card project-card--tall project-card--nova" href="project-nova.html" data-category="web">
+            <div class="project-card__media"><div class="project-card__visual" aria-hidden="true"></div></div>
             <div class="project-card__body">
               <div class="project-card__cat">Web Platform</div>
               <h3 class="project-card__title">Nova Commerce OS</h3>
               <div class="project-card__tech"><span>React</span><span>Node</span><span>AWS</span></div>
-              <span class="project-card__cta">View Project →</span>
+              <span class="project-card__cta">View Project <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></span>
             </div>
           </a>
-          <a class="project-card project-card--wide" href="project-pulse.html" data-category="mobile">
-            <div class="project-card__media"><div class="project-card__visual" style="background:linear-gradient(135deg,rgba(58,160,255,.12),rgba(0,229,192,.06))"></div></div>
+          <a class="project-card project-card--wide project-card--pulse" href="project-pulse.html" data-category="mobile">
+            <div class="project-card__media"><div class="project-card__visual" aria-hidden="true"></div></div>
             <div class="project-card__body">
               <div class="project-card__cat">Mobile</div>
               <h3 class="project-card__title">Pulse Health</h3>
               <div class="project-card__tech"><span>Flutter</span><span>Firebase</span></div>
-              <span class="project-card__cta">View Project →</span>
+              <span class="project-card__cta">View Project <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></span>
             </div>
           </a>
-          <a class="project-card" href="project-atlas.html" data-category="ai">
-            <div class="project-card__media"><div class="project-card__visual" style="background:linear-gradient(135deg,rgba(124,245,212,.1),rgba(58,160,255,.08))"></div></div>
+          <a class="project-card project-card--atlas" href="project-atlas.html" data-category="ai">
+            <div class="project-card__media"><div class="project-card__visual" aria-hidden="true"></div></div>
             <div class="project-card__body">
               <div class="project-card__cat">AI</div>
               <h3 class="project-card__title">Atlas Insight</h3>
               <div class="project-card__tech"><span>Python</span><span>ML</span></div>
-              <span class="project-card__cta">View Project →</span>
+              <span class="project-card__cta">View Project <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></span>
             </div>
           </a>
-          <a class="project-card" href="project-lumen.html" data-category="ui">
-            <div class="project-card__media"><div class="project-card__visual"></div></div>
+          <a class="project-card project-card--lumen" href="project-lumen.html" data-category="ui">
+            <div class="project-card__media"><div class="project-card__visual" aria-hidden="true"></div></div>
             <div class="project-card__body">
               <div class="project-card__cat">UI/UX</div>
               <h3 class="project-card__title">Lumen Design System</h3>
               <div class="project-card__tech"><span>Figma</span><span>Design Ops</span></div>
-              <span class="project-card__cta">View Project →</span>
+              <span class="project-card__cta">View Project <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></span>
             </div>
           </a>
-          <a class="project-card" href="project-orbit.html" data-category="software">
-            <div class="project-card__media"><div class="project-card__visual" style="background:linear-gradient(145deg,rgba(0,229,192,.06),rgba(10,32,48,.4))"></div></div>
+          <a class="project-card project-card--wide project-card--orbit" href="project-orbit.html" data-category="software">
+            <div class="project-card__media"><div class="project-card__visual" aria-hidden="true"></div></div>
             <div class="project-card__body">
               <div class="project-card__cat">Software</div>
               <h3 class="project-card__title">Orbit Logistics</h3>
               <div class="project-card__tech"><span>Node</span><span>PostgreSQL</span></div>
-              <span class="project-card__cta">View Project →</span>
+              <span class="project-card__cta">View Project <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></span>
             </div>
           </a>
         </div>
@@ -376,7 +422,7 @@
           <span class="industry-chip">Startups</span>
         </div>
         <div class="mt-5" data-animate="fade-up">
-          <a class="btn-solynx btn-solynx--secondary" href="solutions.html">View industry solutions <span class="btn-arrow">→</span></a>
+          <a class="btn-solynx btn-solynx--secondary" href="solutions.html">View industry solutions <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></a>
         </div>
       </div>
     </section>
@@ -389,7 +435,7 @@
         <h2 data-animate="fade-up">LET'S BUILD SOMETHING EXTRAORDINARY.</h2>
         <p data-animate="fade-up">Tell us where you are. We'll help you engineer what comes next.</p>
         <div class="btn-group-solynx justify-content-center" data-animate="fade-up">
-          <a class="btn-solynx btn-solynx--primary btn-solynx--lg" href="quote.html" data-magnetic>Start a Project <span class="btn-arrow">→</span></a>
+          <a class="btn-solynx btn-solynx--primary btn-solynx--lg" href="quote.html" data-magnetic>Start a Project <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 2.5L22.5 7 15 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.2" cy="7" r="1.4" fill="currentColor"/></svg></span></a>
           <a class="btn-solynx btn-solynx--secondary btn-solynx--lg" href="contact.html">Talk to Solynx</a>
         </div>
       </div>

@@ -3,9 +3,10 @@
 .about-ecosystem,
 .tech-ecosystem,
 .contact-visual,
-.quote-visual {
+.quote-visual,
+.page-hero__visual {
   position: relative;
-  min-height: 320px;
+  min-height: 280px;
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   background:
@@ -91,8 +92,8 @@
 /* Services page list */
 .service-row {
   display: grid;
-  gap: 1.5rem;
-  padding: 2.5rem 0;
+  gap: 1.25rem;
+  padding: 1.75rem 0;
   border-bottom: 1px solid var(--border);
   align-items: start;
 }
@@ -445,13 +446,14 @@
 /* Split layout */
 .split-section {
   display: grid;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
 }
 
 @media (min-width: 992px) {
   .split-section {
     grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
   }
   .split-section--reverse > :first-child {
     order: 2;

@@ -30,8 +30,9 @@
   /* Layout */
   --container: 1240px;
   --container-wide: 1440px;
-  --section-pad: clamp(4.5rem, 10vw, 8rem);
-  --nav-height: 80px;
+  --section-pad: clamp(2.5rem, 4.5vw, 3.75rem);
+  --section-gap: clamp(1.75rem, 3vw, 2.75rem);
+  --nav-height: 76px;
   --radius: 4px;
   --radius-lg: 12px;
   --radius-xl: 20px;

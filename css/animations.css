@@ -32,6 +32,20 @@
   color: var(--accent);
 }
 
+.loader-brand {
+  margin-bottom: 1.75rem;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: loaderIn 0.7s var(--ease-out-expo) 0.1s forwards;
+}
+
+.loader-brand img {
+  width: min(220px, 70vw);
+  height: auto;
+  margin-inline: auto;
+  filter: drop-shadow(0 0 24px rgba(0, 229, 192, 0.15));
+}
+
 .loader-line {
   width: min(220px, 60vw);
   height: 1px;
@@ -71,6 +85,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .loader-logo,
+  .loader-brand,
   .loader-line,
   .loader-pct {
     animation: none;
@@ -143,28 +158,29 @@ body.cursor-click .cursor-ring {
 /* Scroll reveal */
 [data-animate] {
   opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo), filter 0.8s var(--ease-out-expo), clip-path 0.9s var(--ease-out-expo);
+  transform: translateY(20px);
+  transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo), filter 0.7s var(--ease-out-expo);
   will-change: opacity, transform;
 }
 
-[data-animate="fade-up"] { transform: translateY(36px); }
-[data-animate="fade-down"] { transform: translateY(-36px); }
-[data-animate="fade-left"] { transform: translateX(40px); }
-[data-animate="fade-right"] { transform: translateX(-40px); }
-[data-animate="scale"] { transform: scale(0.92); }
-[data-animate="blur"] { filter: blur(12px); transform: translateY(20px); }
+[data-animate="fade-up"] { transform: translateY(24px); }
+[data-animate="fade-down"] { transform: translateY(-24px); }
+[data-animate="fade-left"] { transform: translateX(28px); }
+[data-animate="fade-right"] { transform: translateX(-28px); }
+[data-animate="scale"] { transform: scale(0.96); }
+[data-animate="blur"] { filter: blur(8px); transform: translateY(14px); }
+
+/* Clip reveal without collapsing/hiding layout into a blank slab */
 [data-animate="clip"] {
-  clip-path: inset(0 0 100% 0);
-  transform: none;
-  opacity: 1;
+  opacity: 0;
+  transform: translateY(18px);
+  clip-path: none;
 }
 
 [data-animate].is-inview {
   opacity: 1;
   transform: none;
   filter: none;
-  clip-path: inset(0 0 0 0);
 }
 
 [data-stagger] > * {

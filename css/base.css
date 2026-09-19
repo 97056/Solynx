@@ -132,8 +132,35 @@ p {
   z-index: var(--z-base);
 }
 
+/* Keep rhythm even when sections stack — avoid double-tall gaps */
+.page-content > .section + .section {
+  padding-top: var(--section-gap);
+}
+
 .section--tight {
-  padding: clamp(3rem, 6vw, 5rem) 0;
+  padding: var(--section-gap) 0;
+}
+
+.page-content > .section.section--tight + .section,
+.page-content > .section + .section.section--tight {
+  padding-top: var(--section-gap);
+}
+
+/* Tone down Bootstrap spacing utilities inside pages */
+.page-content .mb-5 {
+  margin-bottom: 1.75rem !important;
+}
+
+.page-content .mb-4 {
+  margin-bottom: 1.25rem !important;
+}
+
+.page-content .mt-5 {
+  margin-top: 1.75rem !important;
+}
+
+.page-content .mt-4 {
+  margin-top: 1.25rem !important;
 }
 
 .eyebrow {
@@ -145,7 +172,7 @@ p {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.85rem;
 }
 
 .eyebrow::before {
@@ -157,7 +184,7 @@ p {
 
 .section-heading {
   max-width: 18ch;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.85rem;
 }
 
 .section-lead {

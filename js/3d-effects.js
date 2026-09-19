@@ -32,21 +32,23 @@
   }
 
   function initHero3D() {
-    const stage = document.querySelector(".hero-3d__stage");
-    if (!stage) return;
+    const wrap = document.querySelector(".hero-stage") || document.querySelector(".hero-3d");
+    if (!wrap) return;
     const isTouch = matchMedia("(pointer: coarse)").matches;
     const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (isTouch || reduced || window.innerWidth < 992) return;
 
-    const wrap = stage.closest(".hero-3d");
+    wrap.style.transformStyle = "preserve-3d";
+    wrap.style.transition = "transform 0.2s ease-out";
+
     wrap.addEventListener("mousemove", (e) => {
       const rect = wrap.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
-      stage.style.transform = `rotateY(${x * 14}deg) rotateX(${-y * 10}deg)`;
+      wrap.style.transform = `perspective(1000px) rotateY(${x * 7}deg) rotateX(${-y * 5}deg)`;
     });
     wrap.addEventListener("mouseleave", () => {
-      stage.style.transform = "";
+      wrap.style.transform = "";
     });
   }
 
