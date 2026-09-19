@@ -78,7 +78,7 @@
       postgres: ["node", "prisma", "redis", "aws"],
       redis: ["node", "postgres", "go"],
       mongodb: ["python", "node", "aws"],
-      git: ["docker", "github", "node"],
+      git: ["docker", "node", "typescript"],
       tensorflow: ["python", "llm", "analytics"],
       llm: ["python", "tensorflow", "analytics"],
       analytics: ["llm", "firebase", "postgres"],
