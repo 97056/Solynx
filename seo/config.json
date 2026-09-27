@@ -293,55 +293,6 @@
       "changefreq": "monthly",
       "type": "Service"
     },
-    "project-path2career.html": {
-      "path": "/portfolio/path2career",
-      "title": "Path2Career Case Study | AI Placement Platform - Solynx",
-      "description": "Case study: Path2Career AI placement platform with mock interviews, coding lab, and skill tracking.",
-      "keywords": [
-        "Path2Career",
-        "AI mock interview",
-        "placement platform"
-      ],
-      "priority": 0.7,
-      "changefreq": "monthly",
-      "type": "Article"
-    },
-    "project-annadatha.html": {
-      "path": "/portfolio/annadatha-bazar",
-      "title": "Annadatha Bazar Case Study | Agri Marketplace - Solynx",
-      "description": "Case study: Annadatha Bazar multilingual farming marketplace.",
-      "keywords": [
-        "Annadatha Bazar",
-        "agriculture marketplace"
-      ],
-      "priority": 0.7,
-      "changefreq": "monthly",
-      "type": "Article"
-    },
-    "project-tempmail.html": {
-      "path": "/portfolio/tempmail",
-      "title": "TempMail Case Study | Disposable Email - Solynx",
-      "description": "Case study: Solynx TempMail disposable email product.",
-      "keywords": [
-        "TempMail",
-        "disposable email"
-      ],
-      "priority": 0.65,
-      "changefreq": "monthly",
-      "type": "Article"
-    },
-    "project-gym.html": {
-      "path": "/portfolio/gym-management",
-      "title": "Gym Management Case Study | Solynx",
-      "description": "Case study: Solynx Gym Management memberships and operations software.",
-      "keywords": [
-        "gym management",
-        "membership software"
-      ],
-      "priority": 0.65,
-      "changefreq": "monthly",
-      "type": "Article"
-    },
     "project-lms.html": {
       "path": "/portfolio/lms",
       "title": "LMS Case Study | Learning Management System - Solynx",

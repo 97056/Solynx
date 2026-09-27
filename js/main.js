@@ -43,6 +43,7 @@
       const href = link.getAttribute("href");
       if (!href || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:")) return;
       if (link.target === "_blank" || link.hasAttribute("download")) return;
+      if (/^https?:\/\//i.test(href) && !href.includes(location.host)) return;
       if (!href.endsWith(".html") && !href.endsWith("/")) return;
       if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
 

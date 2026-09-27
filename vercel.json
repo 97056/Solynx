@@ -98,26 +98,6 @@
       "permanent": true
     },
     {
-      "source": "/project-path2career.html",
-      "destination": "/portfolio/path2career",
-      "permanent": true
-    },
-    {
-      "source": "/project-annadatha.html",
-      "destination": "/portfolio/annadatha-bazar",
-      "permanent": true
-    },
-    {
-      "source": "/project-tempmail.html",
-      "destination": "/portfolio/tempmail",
-      "permanent": true
-    },
-    {
-      "source": "/project-gym.html",
-      "destination": "/portfolio/gym-management",
-      "permanent": true
-    },
-    {
       "source": "/project-lms.html",
       "destination": "/portfolio/lms",
       "permanent": true
@@ -205,22 +185,6 @@
     {
       "source": "/services/data-analytics",
       "destination": "/data-analytics.html"
-    },
-    {
-      "source": "/portfolio/path2career",
-      "destination": "/project-path2career.html"
-    },
-    {
-      "source": "/portfolio/annadatha-bazar",
-      "destination": "/project-annadatha.html"
-    },
-    {
-      "source": "/portfolio/tempmail",
-      "destination": "/project-tempmail.html"
-    },
-    {
-      "source": "/portfolio/gym-management",
-      "destination": "/project-gym.html"
     },
     {
       "source": "/portfolio/lms",

@@ -209,26 +209,6 @@
       label: "Live metrics",
       html: '<div class="hx-bars"><span></span><span></span><span></span><span></span><span></span><span></span></div>',
     },
-    "project-path2career.html": {
-      key: "path2career",
-      label: "AI career platform",
-      html: '<div class="hx-dash"><i></i><i></i><i></i><i></i></div>',
-    },
-    "project-annadatha.html": {
-      key: "annadatha",
-      label: "Agri marketplace",
-      html: '<div class="hx-map"></div><div class="hx-route"></div>',
-    },
-    "project-tempmail.html": {
-      key: "tempmail",
-      label: "Temp inbox",
-      html: '<div class="hx-browser"><div class="hx-browser__bar"><i></i><i></i><i></i></div><div class="hx-browser__body"><span></span><span></span><span></span></div></div>',
-    },
-    "project-gym.html": {
-      key: "gym",
-      label: "Gym ops",
-      html: '<div class="hx-plan"><span></span><span></span><span></span><span></span><div class="hx-check">✓</div></div>',
-    },
     "project-lms.html": {
       key: "lms",
       label: "Learning system",
@@ -266,10 +246,10 @@
     "/services/seo": "seo.html",
     "/services/software-testing": "testing.html",
     "/services/data-analytics": "data-analytics.html",
-    "/portfolio/path2career": "project-path2career.html",
-    "/portfolio/annadatha-bazar": "project-annadatha.html",
-    "/portfolio/tempmail": "project-tempmail.html",
-    "/portfolio/gym-management": "project-gym.html",
+    
+    
+    
+    
     "/portfolio/lms": "project-lms.html",
     "/portfolio/hrms": "project-hrms.html",
     "/portfolio/school-management": "project-school.html",
