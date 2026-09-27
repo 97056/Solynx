@@ -209,30 +209,40 @@
       label: "Live metrics",
       html: '<div class="hx-bars"><span></span><span></span><span></span><span></span><span></span><span></span></div>',
     },
-    "project-nova.html": {
-      key: "nova",
-      label: "Commerce OS",
+    "project-path2career.html": {
+      key: "path2career",
+      label: "AI career platform",
       html: '<div class="hx-dash"><i></i><i></i><i></i><i></i></div>',
     },
-    "project-pulse.html": {
-      key: "pulse",
-      label: "Health signal",
-      html: '<div class="hx-line"></div><svg class="hx-ekg" viewBox="0 0 200 60" preserveAspectRatio="none"><path d="M0 30 H40 L50 10 L60 50 L70 30 H110 L120 18 L130 42 L140 30 H200" stroke="currentColor" stroke-width="2" fill="none"/></svg>',
-    },
-    "project-atlas.html": {
-      key: "atlas",
-      label: "Insight core",
-      html: '<div class="hx-brain"></div>',
-    },
-    "project-lumen.html": {
-      key: "lumen",
-      label: "Design tokens",
-      html: '<div class="hx-swatch"></div><div class="hx-swatch"></div><div class="hx-swatch"></div><div class="hx-swatch"></div>',
-    },
-    "project-orbit.html": {
-      key: "orbit",
-      label: "Logistics map",
+    "project-annadatha.html": {
+      key: "annadatha",
+      label: "Agri marketplace",
       html: '<div class="hx-map"></div><div class="hx-route"></div>',
+    },
+    "project-tempmail.html": {
+      key: "tempmail",
+      label: "Temp inbox",
+      html: '<div class="hx-browser"><div class="hx-browser__bar"><i></i><i></i><i></i></div><div class="hx-browser__body"><span></span><span></span><span></span></div></div>',
+    },
+    "project-gym.html": {
+      key: "gym",
+      label: "Gym ops",
+      html: '<div class="hx-plan"><span></span><span></span><span></span><span></span><div class="hx-check">✓</div></div>',
+    },
+    "project-lms.html": {
+      key: "lms",
+      label: "Learning system",
+      html: '<div class="hx-mod">Courses</div><div class="hx-mod">Assessments</div><div class="hx-mod">Progress</div>',
+    },
+    "project-hrms.html": {
+      key: "hrms",
+      label: "People ops",
+      html: '<div class="hx-mod">Employees</div><div class="hx-mod">Attendance</div><div class="hx-mod">Leave</div>',
+    },
+    "project-school.html": {
+      key: "school",
+      label: "School ERP",
+      html: '<div class="hx-mod">Students</div><div class="hx-mod">Fees</div><div class="hx-mod">Academics</div>',
     },
   };
 
@@ -256,11 +266,13 @@
     "/services/seo": "seo.html",
     "/services/software-testing": "testing.html",
     "/services/data-analytics": "data-analytics.html",
-    "/portfolio/nova-commerce-os": "project-nova.html",
-    "/portfolio/pulse-health": "project-pulse.html",
-    "/portfolio/atlas-insight": "project-atlas.html",
-    "/portfolio/lumen-design-system": "project-lumen.html",
-    "/portfolio/orbit-logistics": "project-orbit.html",
+    "/portfolio/path2career": "project-path2career.html",
+    "/portfolio/annadatha-bazar": "project-annadatha.html",
+    "/portfolio/tempmail": "project-tempmail.html",
+    "/portfolio/gym-management": "project-gym.html",
+    "/portfolio/lms": "project-lms.html",
+    "/portfolio/hrms": "project-hrms.html",
+    "/portfolio/school-management": "project-school.html",
   };
 
   function currentPage() {

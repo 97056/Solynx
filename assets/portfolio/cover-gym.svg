@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#120a0a"/><stop offset="1" stop-color="#2a1410"/></defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fb923c"/><stop offset="1" stop-color="#00e5c0"/></linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#g)"/>
+  <rect x="100" y="130" width="460" height="400" rx="24" fill="#1a1010" stroke="#fb923c" stroke-opacity=".35"/>
+  <rect x="140" y="180" width="180" height="18" rx="9" fill="url(#a)"/>
+  <rect x="140" y="230" width="380" height="70" rx="14" fill="#241616"/>
+  <rect x="140" y="320" width="380" height="70" rx="14" fill="#241616"/>
+  <rect x="140" y="410" width="380" height="70" rx="14" fill="#241616"/>
+  <rect x="620" y="130" width="480" height="400" rx="24" fill="#1a1010" stroke="#00e5c0" stroke-opacity=".25"/>
+  <circle cx="860" cy="330" r="110" fill="none" stroke="url(#a)" stroke-width="18" opacity=".7"/>
+  <text x="100" y="640" fill="#fb923c" font-family="Segoe UI, Arial" font-size="28" letter-spacing="4">GYM MANAGEMENT</text>
+  <text x="100" y="700" fill="#fff" font-family="Segoe UI, Arial" font-size="52" font-weight="700">Solynx Gym</text>
+</svg>

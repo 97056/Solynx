@@ -262,6 +262,126 @@
   background: linear-gradient(145deg, #0f1a2e, #061018 45%, #0a2030);
 }
 
+.project-card__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s var(--ease-out-expo);
+}
+
+.project-card:hover .project-card__img {
+  transform: scale(1.04);
+}
+
+.project-card__badge {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  z-index: 2;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(5, 7, 13, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--text-secondary);
+}
+
+.project-card__badge--live {
+  color: #04120f;
+  background: linear-gradient(135deg, #00e5c0, #3aa0ff);
+  border-color: transparent;
+}
+
+.project-card__summary {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+  margin: 0.35rem 0 0.75rem;
+  line-height: 1.45;
+}
+
+.portfolio-proof {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  max-width: 720px;
+}
+
+@media (min-width: 768px) {
+  .portfolio-proof {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.portfolio-proof > div {
+  padding: 1rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.portfolio-proof strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.85rem);
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.portfolio-proof span {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+
+.project-hero-media {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--bg-tertiary);
+  min-height: 220px;
+}
+
+.project-hero-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+.project-hero-media .project-logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  max-height: 48px;
+  width: auto;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 10px;
+  padding: 0.35rem 0.55rem;
+}
+
+.team-card__exp {
+  display: inline-block;
+  margin-top: 0.45rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 229, 192, 0.28);
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
 .project-card__media::after {
   content: "";
   position: absolute;

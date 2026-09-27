@@ -258,8 +258,8 @@
         chip.classList.add("is-active");
         const filter = chip.getAttribute("data-filter");
         cards.forEach((card) => {
-          const cat = card.getAttribute("data-category");
-          const show = filter === "all" || cat === filter;
+          const cat = (card.getAttribute("data-category") || "").split(/\s+/);
+          const show = filter === "all" || cat.indexOf(filter) !== -1;
           card.classList.toggle("is-hidden", !show);
         });
       });
