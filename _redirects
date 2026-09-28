@@ -54,7 +54,7 @@
 /services/data-analytics  /data-analytics.html  200
 /services/data-analytics/  /data-analytics.html  200
 /data-analytics.html  /services/data-analytics  301
-/project-nova.html  /project-pulse.html  /project-atlas.html  /project-lumen.html  /project-orbit.html
+/portfolio/lms  /project-lms.html  200
 /portfolio/lms/  /project-lms.html  200
 /project-lms.html  /portfolio/lms  301
 /portfolio/hrms  /project-hrms.html  200
