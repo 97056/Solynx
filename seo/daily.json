@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-01T10:44:46Z",
-  "date": "2026-11-01",
+  "generatedAt": "2026-11-02T11:36:41Z",
+  "date": "2026-11-02",
   "site": "https://solynx.in",
   "note": "Daily SEO keyword rotation and sitemap lastmod refresh for crawler freshness.",
   "pages": {
@@ -33,16 +33,16 @@
         "technology studio",
         "software engineering team",
         "digital product studio",
-        "IT company India",
-        "software development company",
-        "web development",
-        "mobile app development",
-        "UI UX design",
         "AI solutions",
         "digital transformation",
         "custom software",
         "e-commerce development",
-        "Solynx Innovations"
+        "Solynx Innovations",
+        "IT company India",
+        "software development company",
+        "web development",
+        "mobile app development",
+        "UI UX design"
       ]
     },
     "services.html": {
@@ -73,16 +73,16 @@
         "digital solutions",
         "sector technology",
         "enterprise digital products",
+        "Solynx Innovations",
+        "IT company India",
+        "software development company",
+        "web development",
         "mobile app development",
         "UI UX design",
         "AI solutions",
         "digital transformation",
         "custom software",
-        "e-commerce development",
-        "Solynx Innovations",
-        "IT company India",
-        "software development company",
-        "web development"
+        "e-commerce development"
       ]
     },
     "portfolio.html": {
@@ -93,7 +93,6 @@
         "case studies",
         "digital projects",
         "product case study",
-        "e-commerce development",
         "Solynx Innovations",
         "IT company India",
         "software development company",
@@ -102,7 +101,8 @@
         "UI UX design",
         "AI solutions",
         "digital transformation",
-        "custom software"
+        "custom software",
+        "e-commerce development"
       ]
     },
     "technologies.html": {
@@ -133,6 +133,8 @@
         "software jobs",
         "AI engineer jobs",
         "product designer jobs",
+        "custom software",
+        "e-commerce development",
         "Solynx Innovations",
         "IT company India",
         "software development company",
@@ -140,9 +142,7 @@
         "mobile app development",
         "UI UX design",
         "AI solutions",
-        "digital transformation",
-        "custom software",
-        "e-commerce development"
+        "digital transformation"
       ]
     },
     "contact.html": {
@@ -153,6 +153,8 @@
         "hire software company",
         "project inquiry",
         "support@solynx.in",
+        "web development",
+        "mobile app development",
         "UI UX design",
         "AI solutions",
         "digital transformation",
@@ -160,9 +162,7 @@
         "e-commerce development",
         "Solynx Innovations",
         "IT company India",
-        "software development company",
-        "web development",
-        "mobile app development"
+        "software development company"
       ]
     },
     "quote.html": {
@@ -173,16 +173,16 @@
         "project estimate",
         "software development quote",
         "app cost estimate",
-        "mobile app development",
-        "UI UX design",
-        "AI solutions",
-        "digital transformation",
         "custom software",
         "e-commerce development",
         "Solynx Innovations",
         "IT company India",
         "software development company",
-        "web development"
+        "web development",
+        "mobile app development",
+        "UI UX design",
+        "AI solutions",
+        "digital transformation"
       ]
     },
     "web-development.html": {
@@ -213,15 +213,15 @@
         "iOS Android apps",
         "Flutter apps",
         "cross-platform apps",
-        "Solynx Innovations",
-        "IT company India",
-        "software development company",
-        "web development",
         "UI UX design",
         "AI solutions",
         "digital transformation",
         "custom software",
-        "e-commerce development"
+        "e-commerce development",
+        "Solynx Innovations",
+        "IT company India",
+        "software development company",
+        "web development"
       ]
     },
     "ui-ux.html": {
@@ -232,15 +232,15 @@
         "product design",
         "design systems",
         "user experience",
-        "Solynx Innovations",
-        "IT company India",
-        "software development company",
-        "web development",
         "mobile app development",
         "AI solutions",
         "digital transformation",
         "custom software",
-        "e-commerce development"
+        "e-commerce development",
+        "Solynx Innovations",
+        "IT company India",
+        "software development company",
+        "web development"
       ]
     },
     "ecommerce.html": {
@@ -271,16 +271,16 @@
         "enterprise software",
         "internal tools",
         "platform engineering",
+        "IT company India",
+        "software development company",
+        "web development",
         "mobile app development",
         "UI UX design",
         "AI solutions",
         "digital transformation",
         "custom software",
         "e-commerce development",
-        "Solynx Innovations",
-        "IT company India",
-        "software development company",
-        "web development"
+        "Solynx Innovations"
       ]
     },
     "ai-solutions.html": {
@@ -291,15 +291,15 @@
         "LLM applications",
         "machine learning",
         "AI automation",
-        "e-commerce development",
-        "Solynx Innovations",
-        "IT company India",
-        "software development company",
         "web development",
         "mobile app development",
         "UI UX design",
         "digital transformation",
-        "custom software"
+        "custom software",
+        "e-commerce development",
+        "Solynx Innovations",
+        "IT company India",
+        "software development company"
       ]
     },
     "digital-marketing.html": {
@@ -330,46 +330,6 @@
         "technical SEO",
         "organic search",
         "SEO company",
-        "AI solutions",
-        "digital transformation",
-        "custom software",
-        "e-commerce development",
-        "Solynx Innovations",
-        "IT company India",
-        "software development company",
-        "web development",
-        "mobile app development",
-        "UI UX design"
-      ]
-    },
-    "testing.html": {
-      "path": "/services/software-testing",
-      "title": "Software Testing Services | QA Automation & Quality Engineering - Solynx",
-      "keywords": [
-        "software testing",
-        "QA automation",
-        "quality engineering",
-        "test automation",
-        "AI solutions",
-        "digital transformation",
-        "custom software",
-        "e-commerce development",
-        "Solynx Innovations",
-        "IT company India",
-        "software development company",
-        "web development",
-        "mobile app development",
-        "UI UX design"
-      ]
-    },
-    "data-analytics.html": {
-      "path": "/services/data-analytics",
-      "title": "Data Analytics Services | Dashboards, Pipelines & Insights - Solynx",
-      "keywords": [
-        "data analytics",
-        "business intelligence",
-        "data pipelines",
-        "dashboards",
         "Solynx Innovations",
         "IT company India",
         "software development company",
@@ -380,6 +340,46 @@
         "digital transformation",
         "custom software",
         "e-commerce development"
+      ]
+    },
+    "testing.html": {
+      "path": "/services/software-testing",
+      "title": "Software Testing Services | QA Automation & Quality Engineering - Solynx",
+      "keywords": [
+        "software testing",
+        "QA automation",
+        "quality engineering",
+        "test automation",
+        "IT company India",
+        "software development company",
+        "web development",
+        "mobile app development",
+        "UI UX design",
+        "AI solutions",
+        "digital transformation",
+        "custom software",
+        "e-commerce development",
+        "Solynx Innovations"
+      ]
+    },
+    "data-analytics.html": {
+      "path": "/services/data-analytics",
+      "title": "Data Analytics Services | Dashboards, Pipelines & Insights - Solynx",
+      "keywords": [
+        "data analytics",
+        "business intelligence",
+        "data pipelines",
+        "dashboards",
+        "e-commerce development",
+        "Solynx Innovations",
+        "IT company India",
+        "software development company",
+        "web development",
+        "mobile app development",
+        "UI UX design",
+        "AI solutions",
+        "digital transformation",
+        "custom software"
       ]
     },
     "project-lms.html": {
@@ -406,7 +406,6 @@
       "keywords": [
         "HRMS",
         "human resource management",
-        "Solynx Innovations",
         "IT company India",
         "software development company",
         "web development",
@@ -415,7 +414,8 @@
         "AI solutions",
         "digital transformation",
         "custom software",
-        "e-commerce development"
+        "e-commerce development",
+        "Solynx Innovations"
       ]
     },
     "project-school.html": {
@@ -424,6 +424,7 @@
       "keywords": [
         "school management system",
         "education ERP",
+        "mobile app development",
         "UI UX design",
         "AI solutions",
         "digital transformation",
@@ -432,8 +433,7 @@
         "Solynx Innovations",
         "IT company India",
         "software development company",
-        "web development",
-        "mobile app development"
+        "web development"
       ]
     }
   }
